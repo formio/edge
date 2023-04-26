@@ -23,6 +23,8 @@ const server = new Server({
     }),
     auth: new Modules.auth(),
     actions: Modules.actions,
+    process: Modules.process,
+    prepare: Modules.prepare,
     config: {
         license: licenseKey,
         status: {
