@@ -1,11 +1,12 @@
 {
   "name": "@formio/appserver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A highly performant and extensible Application Server for Form.io Multi-Tenant Deployments.",
   "main": "server.js",
   "scripts": {
     "build": "tsc",
-    "test": "mocha -r ts-node/register 'src/**/*.spec.ts'"
+    "test": "mocha -r ts-node/register 'src/**/*.spec.ts'",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
