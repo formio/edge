@@ -59,5 +59,24 @@ const server = new Server({
 })();
 ```
 
+### Running Locally
+To run this library locally, you can clone the repository, and then npm install.
+
+```
+yarn install
+```
+
+Then do the following.
+
+```
+cp .env.example .env
+```
+
+Now, within the ```.env``` file, modify all of the environment variables to be the correct values. Next, you can run the server using the following.
+
+```
+node index
+```
+
 ### Configuration
 The following configurations can be provided to the Server instance.
