@@ -60,7 +60,13 @@ const server = new Server({
 ```
 
 ### Running Locally
-To run this library locally, you can clone the repository, and then do the following.
+To run this library locally, you can clone the repository, and then npm install.
+
+```
+yarn install
+```
+
+Then do the following.
 
 ```
 cp .env.example .env
