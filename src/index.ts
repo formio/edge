@@ -1,3 +1,17 @@
+// Load the license key.
+import fs from 'fs';
+import get from 'lodash/get';
+let licenseKey = get(process.env, 'LICENSE_KEY', '');
+if (!licenseKey) {
+    try {
+        licenseKey = fs.readFileSync(path.join(cwd(), 'license.txt'), 'utf8');
+    }
+    catch (err) {
+        console.log('No license key found. Please set the LICENSE_KEY environment variable or create a license.txt file in the root of the project.');
+        process.exit();
+    }
+}
+
 import { Server as CoreServer } from '@formio/appserver-core';
 import { Auth } from "./auth";
 import { Database } from "./db";
@@ -7,23 +21,10 @@ import { Prepper } from './prepare';
 import { AppServerScope, Processor as ProcessorType, Prepper as PrepperType, ServerConfig } from '@formio/appserver-types';
 import { cwd } from 'process';
 import path from 'path';
-import fs from 'fs';
-import get from 'lodash/get';
 import defaultsDeep from 'lodash/defaultsDeep';
 const packageJson = require('../package.json');
 const appCorePackage = require('@formio/appserver-core/package.json');
 const corePackage = require('@formio/core');
-
-// Load the license key.
-let licenseKey = get(process.env, 'LICENSE_KEY', '');
-if (!licenseKey) {
-    try {
-        licenseKey = fs.readFileSync(path.join(cwd(), 'license.txt'), 'utf8');
-    }
-    catch (err) {
-        console.error('No license key found. Please set the LICENSE_KEY environment variable or create a license.txt file in the root of the project.');
-    }
-}
 
 export const Modules = {
     db: Database,
