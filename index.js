@@ -4,7 +4,7 @@ const app = express();
 const { Server } = require('./lib');
 (async function bootup() {
     // Create the server.
-    const server = await new Server();
+    const server = new Server();
 
     // Initialize the server.
     await server.init();

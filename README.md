@@ -16,7 +16,7 @@ const app = express();
 const { Server } = require('@formio/appserver');
 (async function bootup() {
     // Create the server.
-    const server = await new Server();
+    const server = new Server();
 
     // Initialize the server.
     await server.init();
@@ -64,7 +64,7 @@ const { CustomAuth } = require('./customAuth');
 const { CustomAction } = require('./actions/custom');
 (async function bootup() {
     // Create the server.
-    const server = await new Server({
+    const server = new Server({
         /**
          * The "db" configuration provides a way to use a Custom database implementation.
          * 
