@@ -54,7 +54,7 @@ node index
 This library uses environment variables to configure the configurations required to run the server. These are as follows.
 
 | Variable Name         | Required | Description | Example |
-|--------------|:-----:|-----------:|
+|--------------|-----|-----------|-----|
 | MONGO | yes | Your MongoDB Connection string to use the default DB. | mongodb://localhost:27017/appserver |
 | PROJECT_ENDPOINT | yes | The endpoint for your deployed Form.io Enterprise project. | https://mydeployment.com/myproject |
 | PROJECT_KEY | yes | The API Key for your deployed Form.io Enterprise Project. | abc123 |
