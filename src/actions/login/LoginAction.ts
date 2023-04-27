@@ -3,10 +3,8 @@ import has from 'lodash/has';
 import set from 'lodash/set';
 import get from 'lodash/get';
 import unset from 'lodash/unset';
-import { ActionScope } from '../../types/action'
-import { User } from '../../types/server';
-import { SubmissionRequest, SubmissionResponse } from 'src/types/submission';
 import { NextFunction } from 'express';
+import { ActionScope, User, SubmissionRequest, SubmissionResponse } from '@formio/appserver-types';
 const debug = require('debug')('formio:action:login');
 const error = require('debug')('formio:error');
 export const LoginAction = {

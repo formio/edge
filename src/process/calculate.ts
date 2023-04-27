@@ -1,5 +1,5 @@
 import set from 'lodash/set';
-import { ProcessScope } from '../types/submission';
+import { ProcessScope } from '@formio/appserver-types';
 export default async (scope: ProcessScope) => {
     const { component, row } = scope;
     if (!component.calculateValue || !component.calculateServer) {

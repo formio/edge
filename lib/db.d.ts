@@ -1,6 +1,5 @@
 import { Collection, Db } from 'mongodb';
-import { DBConfig, ServerDB } from './types/server';
-import { FormScope } from './types/form';
+import { DBConfig, ServerDB, FormScope } from '@formio/appserver-types';
 export declare class Database implements ServerDB {
     config: DBConfig;
     db: Db | null;
@@ -17,7 +16,13 @@ export declare class Database implements ServerDB {
     connect(): Promise<void>;
     save(collectionName: string, item: any): Promise<import("mongodb").WithId<import("bson").Document> | null>;
     load(collectionName: string): Promise<import("mongodb").WithId<import("bson").Document> | null | undefined>;
-    collection(scope: FormScope): Promise<Collection<Document> | null>;
+    remove(collectionName: string): Promise<number | null>;
+    /**
+     * Ensures the form collection is created an returns it.
+     * @param scope
+     * @returns
+     */
+    formCollection(scope: FormScope): Promise<Collection<Document> | null>;
     /**
      * Setup indexes.
      */
@@ -27,9 +32,23 @@ export declare class Database implements ServerDB {
      */
     addIndex(collection: Collection<Document>, path: string): Promise<void>;
     /**
+     * Adds new indexes to the forms submission collection.
+     * @param scope
+     * @param indexes
+     * @returns
+     */
+    addIndexes(scope: FormScope, indexes: string[]): Promise<void>;
+    /**
      * Remove a field index.
      */
     removeIndex(collection: Collection<Document>, path: string): Promise<void>;
+    /**
+     * Removes indexes to the forms submission collection.
+     * @param scope
+     * @param indexes
+     * @returns
+     */
+    removeIndexes(scope: FormScope, indexes: string[]): Promise<void>;
     /**
      * Fetch a list of submissions from a table/collection.
      * @param {*} table

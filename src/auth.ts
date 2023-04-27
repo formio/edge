@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { AuthModule, AuthToken } from './types/server';
+import { AuthModule, AuthToken } from '@formio/appserver-types';
 const debug = require('debug')('formio:auth');
 const error = require('debug')('formio:error');
 export class Auth implements AuthModule {

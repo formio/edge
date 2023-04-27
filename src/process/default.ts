@@ -1,6 +1,6 @@
 import set from 'lodash/set';
 import has from 'lodash/has';
-import { ProcessScope } from '../types/submission';
+import { ProcessScope } from '@formio/appserver-types';
 export default async (scope: ProcessScope) => {
     const { component, row } = scope;
     if (

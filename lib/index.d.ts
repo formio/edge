@@ -1,11 +1,16 @@
 /// <reference types="express" />
+import { Server as CoreServer } from '@formio/appserver-core';
 import { Auth } from "./auth";
 import { Database } from "./db";
+import Actions from "./actions";
+import { Processor } from "./process";
+import { Prepper } from './prepare';
+import { AppServerScope, Processor as ProcessorType, Prepper as PrepperType } from '@formio/appserver-types';
 export declare const Modules: {
     db: typeof Database;
     auth: typeof Auth;
-    process: (scope: import("./types/submission").ProcessScope) => Promise<any>;
-    prepare: (scope: import("./types/submission").PrepScope) => Promise<{}>;
+    processor: ProcessorType;
+    prepper: PrepperType;
     actions: {
         save: {
             readonly info: {
@@ -22,12 +27,12 @@ export declare const Modules: {
                     method: boolean;
                 };
             };
-            mappingComponents(scope: import("./types/action").ActionScope): Promise<any>;
-            settingsForm(scope: import("./types/action").ActionScope): Promise<any>;
-            saveToForm(scope: import("./types/action").ActionScope, resource: string): undefined;
-            childSubmission(scope: import("./types/action").ActionScope, req: import("./types/submission").SubmissionRequest, res: import("./types/submission").SubmissionResponse, submission: any): any;
-            childResponse(scope: import("./types/action").ActionScope, req: import("./types/submission").SubmissionRequest, res: import("./types/submission").SubmissionResponse): void;
-            executor(scope: import("./types/action").ActionScope): Promise<(req: import("./types/submission").SubmissionRequest, res: import("./types/submission").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
+            mappingComponents(scope: import("@formio/appserver-types").ActionScope): Promise<any>;
+            settingsForm(scope: import("@formio/appserver-types").ActionScope): Promise<any>;
+            saveToForm(scope: import("@formio/appserver-types").ActionScope, resource: string): undefined;
+            childSubmission(scope: import("@formio/appserver-types").ActionScope, req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse, submission: any): any;
+            childResponse(scope: import("@formio/appserver-types").ActionScope, req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse): void;
+            executor(scope: import("@formio/appserver-types").ActionScope): Promise<(req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
         };
         login: {
             readonly info: {
@@ -44,7 +49,7 @@ export declare const Modules: {
                     method: boolean;
                 };
             };
-            settingsForm(scope: import("./types/action").ActionScope): Promise<({
+            settingsForm(scope: import("@formio/appserver-types").ActionScope): Promise<({
                 type: string;
                 label: string;
                 key: string;
@@ -110,8 +115,8 @@ export declare const Modules: {
                 validate?: undefined;
             })[]>;
             waitText(time: number): string;
-            checkAttempts(scope: import("./types/action").ActionScope, error: any, user: import("./types/server").User): Promise<any>;
-            executor(scope: import("./types/action").ActionScope): Promise<(req: import("./types/submission").SubmissionRequest, res: import("./types/submission").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
+            checkAttempts(scope: import("@formio/appserver-types").ActionScope, error: any, user: import("@formio/appserver-types").User): Promise<any>;
+            executor(scope: import("@formio/appserver-types").ActionScope): Promise<(req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
         };
         role: {
             readonly info: {
@@ -128,7 +133,7 @@ export declare const Modules: {
                     method: boolean;
                 };
             };
-            settingsForm(scope: import("./types/action").ActionScope): Promise<({
+            settingsForm(scope: import("@formio/appserver-types").ActionScope): Promise<({
                 type: string;
                 input: boolean;
                 label: string;
@@ -161,7 +166,15 @@ export declare const Modules: {
                     required: boolean;
                 };
             })[]>;
-            executor(scope: import("./types/action").ActionScope): Promise<(req: import("./types/submission").SubmissionRequest, res: import("./types/submission").SubmissionResponse, next: import("express").NextFunction) => Promise<void | import("./types/submission").SubmissionResponse>>;
+            executor(scope: import("@formio/appserver-types").ActionScope): Promise<(req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse, next: import("express").NextFunction) => Promise<void | import("@formio/appserver-types").SubmissionResponse>>;
         };
     };
 };
+export declare class Server extends CoreServer {
+    constructor(config?: AppServerScope);
+}
+export { Prepper };
+export { Processor };
+export { Database };
+export { Auth };
+export { Actions };

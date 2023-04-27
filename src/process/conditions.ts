@@ -1,9 +1,8 @@
 import unset from 'lodash/unset';
 import get from 'lodash/get';
 import has from 'lodash/has';
-import isObject from 'lodash/isObject';
 import isArray from 'lodash/isArray';
-import { ProcessScope } from '../types/submission';
+import { ProcessScope } from '@formio/appserver-types';
 const shouldUnset = (scope: ProcessScope) => {
     const { form, data, component } = scope;
     const { conditional, customConditional } = component;

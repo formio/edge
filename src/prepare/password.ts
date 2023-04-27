@@ -1,7 +1,7 @@
 import get from 'lodash/get';
 import set from 'lodash/set';
 import has from 'lodash/has';
-import { PrepScope } from '../types/submission';
+import { PrepScope } from '@formio/appserver-types';
 export default async (scope: PrepScope) => {
     // Check if they do not provide a password in the save, but one exists in the current record.
     // Do not allow them to wipe out their password by saving data that does not include one.

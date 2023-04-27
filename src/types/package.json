@@ -1,0 +1,21 @@
+{
+  "name": "@formio/appserver-types",
+  "version": "1.2.1",
+  "description": "The types for the appserver.",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "author": "",
+  "license": "OSL-3.0",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}

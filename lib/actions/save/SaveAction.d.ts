@@ -1,5 +1,4 @@
-import { ActionScope } from '../../types/action';
-import { SubmissionRequest, SubmissionResponse } from '../../types/submission';
+import { ActionScope, SubmissionRequest, SubmissionResponse } from '@formio/appserver-types';
 import { NextFunction } from 'express';
 export declare const SaveAction: {
     readonly info: {

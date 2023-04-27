@@ -1,5 +1,4 @@
-import { SubmissionRequest, SubmissionResponse } from "src/types/submission";
-import { ActionScope } from "../../types/action";
+import { SubmissionRequest, SubmissionResponse, ActionScope } from "@formio/appserver-types";
 import { NextFunction } from "express";
 const debug = require('debug')('formio:actions:role');
 const error = require('debug')('formio:error');

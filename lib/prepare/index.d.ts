@@ -1,4 +1,4 @@
-import { PrepScope } from '../types/submission';
+import { PrepScope, Prepper as PrepperType } from '@formio/appserver-types';
 export declare const Preppers: {
     bcrypt: (scope: PrepScope) => Promise<void>;
     access: (scope: PrepScope) => Promise<void>;
@@ -6,5 +6,4 @@ export declare const Preppers: {
     protect: (scope: PrepScope) => Promise<void>;
     password: (scope: PrepScope) => Promise<void>;
 };
-export declare const MethodPreppers: any;
-export declare const Prepper: (scope: PrepScope) => Promise<{}>;
+export declare const Prepper: PrepperType;

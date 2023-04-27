@@ -1,6 +1,6 @@
 import { Auth } from './auth';
 import assert from 'assert';
-import { AuthToken } from './types/server';
+import { AuthToken } from '@formio/appserver-types';
 
 describe('Auth', () => {
     const user: AuthToken = {

@@ -15,12 +15,12 @@ declare const _default: {
                 method: boolean;
             };
         };
-        mappingComponents(scope: import("../types/action").ActionScope): Promise<any>;
-        settingsForm(scope: import("../types/action").ActionScope): Promise<any>;
-        saveToForm(scope: import("../types/action").ActionScope, resource: string): undefined;
-        childSubmission(scope: import("../types/action").ActionScope, req: import("../types/submission").SubmissionRequest, res: import("../types/submission").SubmissionResponse, submission: any): any;
-        childResponse(scope: import("../types/action").ActionScope, req: import("../types/submission").SubmissionRequest, res: import("../types/submission").SubmissionResponse): void;
-        executor(scope: import("../types/action").ActionScope): Promise<(req: import("../types/submission").SubmissionRequest, res: import("../types/submission").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
+        mappingComponents(scope: import("../types/lib").ActionScope): Promise<any>;
+        settingsForm(scope: import("../types/lib").ActionScope): Promise<any>;
+        saveToForm(scope: import("../types/lib").ActionScope, resource: string): undefined;
+        childSubmission(scope: import("../types/lib").ActionScope, req: import("../types/lib").SubmissionRequest, res: import("../types/lib").SubmissionResponse, submission: any): any;
+        childResponse(scope: import("../types/lib").ActionScope, req: import("../types/lib").SubmissionRequest, res: import("../types/lib").SubmissionResponse): void;
+        executor(scope: import("../types/lib").ActionScope): Promise<(req: import("../types/lib").SubmissionRequest, res: import("../types/lib").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
     };
     login: {
         readonly info: {
@@ -37,7 +37,7 @@ declare const _default: {
                 method: boolean;
             };
         };
-        settingsForm(scope: import("../types/action").ActionScope): Promise<({
+        settingsForm(scope: import("../types/lib").ActionScope): Promise<({
             type: string;
             label: string;
             key: string;
@@ -103,8 +103,8 @@ declare const _default: {
             validate?: undefined;
         })[]>;
         waitText(time: number): string;
-        checkAttempts(scope: import("../types/action").ActionScope, error: any, user: import("../types/server").User): Promise<any>;
-        executor(scope: import("../types/action").ActionScope): Promise<(req: import("../types/submission").SubmissionRequest, res: import("../types/submission").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
+        checkAttempts(scope: import("../types/lib").ActionScope, error: any, user: import("../types/lib").User): Promise<any>;
+        executor(scope: import("../types/lib").ActionScope): Promise<(req: import("../types/lib").SubmissionRequest, res: import("../types/lib").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
     };
     role: {
         readonly info: {
@@ -121,7 +121,7 @@ declare const _default: {
                 method: boolean;
             };
         };
-        settingsForm(scope: import("../types/action").ActionScope): Promise<({
+        settingsForm(scope: import("../types/lib").ActionScope): Promise<({
             type: string;
             input: boolean;
             label: string;
@@ -154,7 +154,7 @@ declare const _default: {
                 required: boolean;
             };
         })[]>;
-        executor(scope: import("../types/action").ActionScope): Promise<(req: import("../types/submission").SubmissionRequest, res: import("../types/submission").SubmissionResponse, next: import("express").NextFunction) => Promise<void | import("../types/submission").SubmissionResponse>>;
+        executor(scope: import("../types/lib").ActionScope): Promise<(req: import("../types/lib").SubmissionRequest, res: import("../types/lib").SubmissionResponse, next: import("express").NextFunction) => Promise<void | import("../types/lib").SubmissionResponse>>;
     };
 };
 export default _default;

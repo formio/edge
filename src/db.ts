@@ -1,8 +1,7 @@
 import { Collection, Db, FindOneAndUpdateOptions, MongoClient, ObjectId } from 'mongodb';
 import pick from 'lodash/pick';
 import omit from 'lodash/omit';
-import { DBConfig, ServerDB } from './types/server';
-import { FormScope } from './types/form';
+import { DBConfig, ServerDB, FormScope } from '@formio/appserver-types';
 const debug = require('debug')('formio:db');
 const error = require('debug')('formio:error');
 export class Database implements ServerDB {
@@ -90,8 +89,29 @@ export class Database implements ServerDB {
         return item;
     }
 
-    // Get the collection to use for the call.
-    async collection(scope: FormScope): Promise<Collection<Document> | null> {
+    // Generic delete record method.
+    async remove(collectionName: string) {
+        if (!this.db) {
+            return null;
+        }
+        debug('db.remove()', collectionName);
+        const collection = this.db.collection(collectionName);
+        let result;
+        try {
+            result = await collection.deleteOne({});
+        }
+        catch (err: any) {
+            error(err.message);
+        }
+        return result ? result.deletedCount : null;
+    }
+
+    /**
+     * Ensures the form collection is created an returns it.
+     * @param scope 
+     * @returns 
+     */
+    async formCollection(scope: FormScope): Promise<Collection<Document> | null> {
         if (
             this.db && scope && scope.form && scope.form.settings && scope.form.settings.collection
         ) {
@@ -152,6 +172,22 @@ export class Database implements ServerDB {
     }
 
     /**
+     * Adds new indexes to the forms submission collection.
+     * @param scope 
+     * @param indexes 
+     * @returns 
+     */
+    async addIndexes(scope: FormScope, indexes: string[]) {
+        const collection: Collection<Document> | null = await this.formCollection(scope);
+        if (!collection) {
+            return;
+        }
+        for (const path of indexes) {
+            await this.addIndex(collection, `data.${path}`);
+        }
+    }
+
+    /**
      * Remove a field index.
      */
     async removeIndex(collection: Collection<Document>, path: string) {
@@ -163,6 +199,22 @@ export class Database implements ServerDB {
         }
         catch (err: any) {
             error(`Cannot remove index ${path}`, err.message);
+        }
+    }
+
+    /**
+     * Removes indexes to the forms submission collection.
+     * @param scope 
+     * @param indexes 
+     * @returns 
+     */
+    async removeIndexes(scope: FormScope, indexes: string[]) {
+        const collection: Collection<Document> | null = await this.formCollection(scope);
+        if (!collection) {
+            return;
+        }
+        for (const path of indexes) {
+            await this.removeIndex(collection, `data.${path}`);
         }
     }
 
@@ -199,7 +251,7 @@ export class Database implements ServerDB {
         if (record.owner) {
             record.owner = this.ObjectId(record.owner);
         }
-        const collection: any = await this.collection(scope);
+        const collection: any = await this.formCollection(scope);
         try {
             debug('db.create()', record);
             const result: any = await collection.insertOne(pick(record, [
@@ -262,7 +314,7 @@ export class Database implements ServerDB {
     async find(scope: FormScope, query: any = {}) {
         try {
             debug('db.find()', query);
-            const collection: Collection<Document> | null = await this.collection(scope);
+            const collection: Collection<Document> | null = await this.formCollection(scope);
             if (!collection) {
                 return [];
             }
@@ -280,7 +332,7 @@ export class Database implements ServerDB {
     async findOne(scope: FormScope, query: any = {}) {
         try {
             debug('db.findOne()', query);
-            const collection: Collection<Document> | null = await this.collection(scope);
+            const collection: Collection<Document> | null = await this.formCollection(scope);
             if (!collection) {
                 return null;
             }
@@ -301,7 +353,7 @@ export class Database implements ServerDB {
     async read(scope: FormScope, id: string) {
         try {
             debug('db.read()', id);
-            const collection: Collection<Document> | null = await this.collection(scope);
+            const collection: Collection<Document> | null = await this.formCollection(scope);
             if (!collection) {
                 return null;
             }
@@ -326,7 +378,7 @@ export class Database implements ServerDB {
         update.modified = new Date();
         try {
             debug('db.update()', id, update);
-            const collection: Collection<Document> | null = await this.collection(scope);
+            const collection: Collection<Document> | null = await this.formCollection(scope);
             if (!collection) {
                 return null;
             }
@@ -353,7 +405,7 @@ export class Database implements ServerDB {
         }
         try {
             debug('db.delete()', id);
-            const collection: Collection<Document> | null = await this.collection(scope);
+            const collection: Collection<Document> | null = await this.formCollection(scope);
             if (!collection) {
                 return false;
             }
