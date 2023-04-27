@@ -70,7 +70,8 @@ export class Server extends CoreServer {
                     url: get(process.env, 'PROJECT_ENDPOINT', ''),
                     key: get(process.env, 'PROJECT_KEY', '')
                 }
-            })
+            }),
+            hooks: config.hooks || {}
         });
     }
 }

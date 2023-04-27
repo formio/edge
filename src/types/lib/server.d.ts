@@ -100,4 +100,5 @@ export interface AppServerScope {
     processors?: Array<(scope: ProcessScope) => Promise<any[]>>;
     preppers?: Preppers;
     actions?: any;
+    hooks?: any;
 }
