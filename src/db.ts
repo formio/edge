@@ -9,6 +9,7 @@ export class Database implements ServerDB {
     currentCollectionName: string;
     currentCollection: Collection<Document> | null;
     defaultCollection: Collection<Document> | null;
+    prefix: string = '';
     constructor(public config: DBConfig) {
         this.db = null;
         this.currentCollectionName = 'submissions';
@@ -28,20 +29,25 @@ export class Database implements ServerDB {
         }
     }
 
+    collectionName(name: string) {
+        return `${this.prefix}${name}`;
+    }
+
     /**
      * Connect to the database.
      * @param {*} scope 
      * @returns 
      */
-    async connect() {
+    async connect(prefix = '') {
+        this.prefix = prefix ? `${prefix}.` : '';
         try {
             debug('db.connect()');
             const config = this.config.config ? JSON.parse(this.config.config) : {};
             const client = new MongoClient(this.config.url, config);
             await client.connect();
             this.db = await client.db();
-            this.addIndex(this.db.collection('project'), 'name');
-            this.defaultCollection = this.db.collection('submissions');
+            this.addIndex(this.db.collection(this.collectionName('project')), 'name');
+            this.defaultCollection = this.db.collection(this.collectionName('submissions'));
             await this.setupIndexes(this.defaultCollection);
             debug('Connected to database');
         }
@@ -56,7 +62,7 @@ export class Database implements ServerDB {
         if (!this.db) {
             return null;
         }
-        const collection = this.db.collection(collectionName);
+        const collection = this.db.collection(`${this.prefix}${collectionName}`);
         let result;
         try {
             debug('db.save()', collectionName);
@@ -78,7 +84,7 @@ export class Database implements ServerDB {
             return null;
         }
         debug('db.load()', collectionName);
-        const collection = this.db.collection(collectionName);
+        const collection = this.db.collection(this.collectionName(collectionName));
         let item;
         try {
             item = await collection.findOne({});
@@ -95,7 +101,7 @@ export class Database implements ServerDB {
             return null;
         }
         debug('db.remove()', collectionName);
-        const collection = this.db.collection(collectionName);
+        const collection = this.db.collection(this.collectionName(collectionName));
         let result;
         try {
             result = await collection.deleteOne({});
@@ -121,14 +127,14 @@ export class Database implements ServerDB {
             let collection: Collection<Document> | null = null;
             try {
                 debug('db.createCollection()', scope.form.settings.collection);
-                await this.db.createCollection(scope.form.settings.collection);
-                collection = this.db.collection(scope.form.settings.collection);
+                await this.db.createCollection(this.collectionName(scope.form.settings.collection));
+                collection = this.db.collection(this.collectionName(scope.form.settings.collection));
                 this.setupIndexes(collection, scope)
             }
             catch (err: any) {
                 error(err.message);
             }
-            this.currentCollection = collection || this.db.collection(scope.form.settings.collection);
+            this.currentCollection = collection || this.db.collection(this.collectionName(scope.form.settings.collection));
             this.currentCollectionName = scope.form.settings.collection;
             return this.currentCollection;
         }

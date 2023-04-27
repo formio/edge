@@ -9,12 +9,12 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@formio/appserver-core@^1.3.3":
-  version "1.3.3"
-  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.3.3.tgz#7c11f8a8c8f2410e4dfd7ed2e69c3a3a51fe1d68"
-  integrity sha512-I6bIFutDv74WgA8NTmxWjItK2dDN3HTIlX0T6W0FHlZ8YMfcmkG3uMi2lLvoBb58wwfw11VtVcDdHJ3NonhO4Q==
+"@formio/appserver-core@^1.3.4":
+  version "1.3.4"
+  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.3.4.tgz#b7efac1234685c3d9acf9abf5e204bdb009cf3da"
+  integrity sha512-b5cJdXhooKbSpTsdaDowkYKvz9BydhcPoascg/upeAwECeVv6oMacTonWd16UHrAoHQlltv7uX/jQcG86lDNLw==
   dependencies:
-    "@formio/appserver-types" "^1.2.1"
+    "@formio/appserver-types" "^1.2.3"
     "@formio/core" "^1.3.0-rc.12"
     "@formio/node-fetch-http-proxy" "^1.1.0"
     async "^3.2.4"
@@ -37,6 +37,13 @@
   version "1.2.1"
   resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-1.2.1.tgz#1ce85068118be6ea8dfe4c0bb11dd5ce2f8e7afa"
   integrity sha512-PhgZOBZ6Q/nniLPYQvDIMtokX4wAzlDNXK8zUMoJoi0KoZweHJr383TPIfuQNdfyAv/IhOBn7rt7De+EZeZrTw==
+  dependencies:
+    express "^4.18.2"
+
+"@formio/appserver-types@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-1.2.3.tgz#b3335708cc080615d4b1e07edab1e902e684cf72"
+  integrity sha512-MSlxgUglo1hJbGD+1ju19cJ/VZHkB6Pszby81/lbJsT/q8URUb4XJbqdO93XJgp1yC87lzuf9j5gYBCf3d05vQ==
   dependencies:
     express "^4.18.2"
 

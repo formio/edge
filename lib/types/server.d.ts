@@ -41,7 +41,7 @@ export interface DBConfig {
 }
 export interface ServerDB {
     config: DBConfig;
-    connect: () => Promise<void>;
+    connect: (prefix?: string) => Promise<void>;
     save: (collection: string, doc: any) => Promise<any>;
     load: (collection: string) => Promise<any>;
     remove: (collection: string) => Promise<any>;

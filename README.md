@@ -50,6 +50,33 @@ Now, within the ```.env``` file, modify all of the environment variables to be t
 node index
 ```
 
+### Environment Variables
+This library uses environment variables to configure the configurations required to run the server. These are as follows.
+
+| Variable Name         | Required | Description | Example |
+|--------------|:-----:|-----------:|
+| MONGO | yes | Your MongoDB Connection string to use the default DB. | mongodb://localhost:27017/appserver |
+| PROJECT_ENDPOINT | yes | The endpoint for your deployed Form.io Enterprise project. | https://mydeployment.com/myproject |
+| PROJECT_KEY | yes | The API Key for your deployed Form.io Enterprise Project. | abc123 |
+| LICENSE_KEY | yes | Your License Key for this AppServer deployment. | <LONG LICENSE KEY> |
+| PORT | no | The port that your server will run on. Default 3005 | 3005 |
+| JWT_SECRET | yes | The key used to protect your JWT authentication tokens. | YOUR_SECRET_KEY |
+| JWT_EXPIRE_TIME | no | The number of minutes to expire your JWT token. | 240 |
+| PORTAL_SECRET | no | Provides the ability to connect to the AppServer via the Remote Environment Connection within your Developer Portal. | YOUR_SECRET_KEY |
+| PROJECT_CACHE | no | Disables the cache for project resources (such as Project template, Project Settings, and Access Settings). Default "true" | true |
+| MONGO_CONFIG | no | Additional configurations to add to the DB connection string | {} |
+
+### Developer Portal Connection
+Once you have the AppServer running within your own environment, and connected to your own database, you can now deploy your new changes to your forms, resources, project settings, etc. To accomplish this, you must first run the AppServer using the ```PORTAL_SECRET``` described above.
+
+Once you have this set, you can then log into your Developer Portal, and then navigate to your Project.
+
+Once there, you will then go to your **Staging | Connect Environment**.  Here you will put your AppServer endpoint and the PORTAL_SECRET value. You will then want to set the **Project Path Type** to use **Subdirectory**. Then click **Continue**. 
+
+You will then see the next page, where you will select your Stage in the dropdown. You should see it since the AppServer connects to the project on bootup.
+
+Once you are connected, any changes you make within the Developer portal will now be directly reflected within your AppServer deployment.
+
 ### Custom Configuration
 The AppServer is very extensible, and many things can be altered and modified as well as custom implementations of different components are possible using configurations.
 

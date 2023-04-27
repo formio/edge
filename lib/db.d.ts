@@ -6,14 +6,16 @@ export declare class Database implements ServerDB {
     currentCollectionName: string;
     currentCollection: Collection<Document> | null;
     defaultCollection: Collection<Document> | null;
+    prefix: string;
     constructor(config: DBConfig);
     ObjectId(id: any): any;
+    collectionName(name: string): string;
     /**
      * Connect to the database.
      * @param {*} scope
      * @returns
      */
-    connect(): Promise<void>;
+    connect(prefix?: string): Promise<void>;
     save(collectionName: string, item: any): Promise<import("mongodb").WithId<import("bson").Document> | null>;
     load(collectionName: string): Promise<import("mongodb").WithId<import("bson").Document> | null | undefined>;
     remove(collectionName: string): Promise<number | null>;
