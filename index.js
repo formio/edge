@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const { Server } = require('./lib');
+const { Server } = require('./lib/server');
 (async function bootup() {
     // Create the server.
     const server = new Server();
