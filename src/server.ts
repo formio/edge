@@ -58,6 +58,7 @@ export class Server extends CoreServer {
                 license: licenseKey,
                 cache: (get(process.env, 'PROJECT_CACHE', true)).toString() === 'true',
                 status: {
+                    version: '8.0.0',
                     '@formio/appserver': packageJson.version,
                     '@formio/appserver-core': appCorePackage.version,
                     '@formio/core': corePackage.version

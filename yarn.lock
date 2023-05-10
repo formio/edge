@@ -9,10 +9,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@formio/appserver-core@^1.3.4":
-  version "1.3.4"
-  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.3.4.tgz#b7efac1234685c3d9acf9abf5e204bdb009cf3da"
-  integrity sha512-b5cJdXhooKbSpTsdaDowkYKvz9BydhcPoascg/upeAwECeVv6oMacTonWd16UHrAoHQlltv7uX/jQcG86lDNLw==
+"@formio/appserver-core@^1.3.5":
+  version "1.3.5"
+  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.3.5.tgz#5077f8e4abe0c100ca3c4b60b008a7ac127cd743"
+  integrity sha512-XjlPRWmtTAvmx13c3MlgNWa47GR2dovS6Y2bArXG0JvbuVbFmBsgb7PhbTEyrk+he9wSU//Q9IaP2sZ5RBp1Ww==
   dependencies:
     "@formio/appserver-types" "^1.2.3"
     "@formio/core" "^1.3.0-rc.12"
@@ -24,7 +24,7 @@
     dayjs "^1.11.7"
     debug "^4.3.4"
     express "^4.18.2"
-    jose "^4.14.1"
+    jose "^4.14.4"
     json-logic-js "^2.0.2"
     jsonwebtoken "^9.0.0"
     lodash "^4.17.21"
@@ -32,13 +32,6 @@
     nodemailer "^6.9.1"
     vm2 "^3.9.17"
     xss "^1.0.14"
-
-"@formio/appserver-types@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-1.2.1.tgz#1ce85068118be6ea8dfe4c0bb11dd5ce2f8e7afa"
-  integrity sha512-PhgZOBZ6Q/nniLPYQvDIMtokX4wAzlDNXK8zUMoJoi0KoZweHJr383TPIfuQNdfyAv/IhOBn7rt7De+EZeZrTw==
-  dependencies:
-    express "^4.18.2"
 
 "@formio/appserver-types@^1.2.3":
   version "1.2.3"
@@ -115,10 +108,10 @@
   resolved "https://registry.npmjs.org/@tsconfig/node16/-/node16-1.0.3.tgz#472eaab5f15c1ffdd7f8628bd4c4f753995ec79e"
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
-"@types/async@^3.2.19":
-  version "3.2.19"
-  resolved "https://registry.npmjs.org/@types/async/-/async-3.2.19.tgz#95d97d2bd35cee2fd6534679b37d85c4f8af4de6"
-  integrity sha512-MSgZeRq5H2zm212k1uzlBM/67MTco4O8EFsUmyK96Xg0dOGQMReXKuB9QiBzGz6B0XPWPasjNBbPtMuy3qvtmQ==
+"@types/async@^3.2.20":
+  version "3.2.20"
+  resolved "https://registry.npmjs.org/@types/async/-/async-3.2.20.tgz#53517caaa68c94f99da1c4e986cf7f2954981515"
+  integrity sha512-6jSBQQugzyX1aWto0CbvOnmxrU9tMoXfA9gc4IrLEtvr3dTwSg5GLGoWiZnGLI6UG/kqpB3JOQKQrqnhUWGKQA==
 
 "@types/bcryptjs@^2.4.2":
   version "2.4.2"
@@ -165,10 +158,10 @@
   resolved "https://registry.npmjs.org/@types/json-logic-js/-/json-logic-js-2.0.2.tgz#f22ae63b1ff529db77368e78dab196730a2f1527"
   integrity sha512-kM5tSI/HWDqlxpYTgISwaU93OdQ+fWzYliYOAn3QaVSCT1S6l0nm8jK2RZXRlD+Sx8s6RYhovZSxookkw6Wk7w==
 
-"@types/jsonwebtoken@^9.0.1":
-  version "9.0.1"
-  resolved "https://registry.npmjs.org/@types/jsonwebtoken/-/jsonwebtoken-9.0.1.tgz#29b1369c4774200d6d6f63135bf3d1ba3ef997a4"
-  integrity sha512-c5ltxazpWabia/4UzhIoaDcIza4KViOQhdbjRlfcIGVnsE3c3brkz9Z+F/EeJIECOQP7W7US2hNE930cWWkPiw==
+"@types/jsonwebtoken@^9.0.2":
+  version "9.0.2"
+  resolved "https://registry.npmjs.org/@types/jsonwebtoken/-/jsonwebtoken-9.0.2.tgz#9eeb56c76dd555039be2a3972218de5bd3b8d83e"
+  integrity sha512-drE6uz7QBKq1fYqqoFKTDRdFCPHd5TCub75BM+D+cMx7NU9hUz7SESLfC2fSCXVFMO5Yj8sOWHuGqPgjc+fz0Q==
   dependencies:
     "@types/node" "*"
 
@@ -192,10 +185,15 @@
   resolved "https://registry.npmjs.org/@types/mocha/-/mocha-10.0.1.tgz#2f4f65bb08bc368ac39c96da7b2f09140b26851b"
   integrity sha512-/fvYntiO1GeICvqbQ3doGDIP97vWmvFt83GKguJ6prmQM2iXZfFcq6YE8KteFyRtX2/h5Hf91BYvPodJKFYv5Q==
 
-"@types/node@*", "@types/node@^18.16.1":
+"@types/node@*":
   version "18.16.1"
   resolved "https://registry.npmjs.org/@types/node/-/node-18.16.1.tgz#5db121e9c5352925bb1f1b892c4ae620e3526799"
   integrity sha512-DZxSZWXxFfOlx7k7Rv4LAyiMroaxa3Ly/7OOzZO8cBNho0YzAi4qlbrx8W27JGqG57IgR/6J7r+nOJWw6kcvZA==
+
+"@types/node@^20.1.1":
+  version "20.1.1"
+  resolved "https://registry.npmjs.org/@types/node/-/node-20.1.1.tgz#afc492e8dbe7f672dd3a13674823522b467a45ad"
+  integrity sha512-uKBEevTNb+l6/aCQaKVnUModfEMjAl98lw2Si9P5y4hLu9tm6AlX2ZIoXZX6Wh9lJueYPrGPKk5WMCNHg/u6/A==
 
 "@types/qs@*":
   version "6.9.7"
@@ -879,10 +877,10 @@ is-unicode-supported@^0.1.0:
   resolved "https://registry.npmjs.org/is-unicode-supported/-/is-unicode-supported-0.1.0.tgz#3f26c76a809593b52bfa2ecb5710ed2779b522a7"
   integrity sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==
 
-jose@^4.14.1:
-  version "4.14.2"
-  resolved "https://registry.npmjs.org/jose/-/jose-4.14.2.tgz#f126e2805555882f0d86d1f84bcf00481d5ab3bf"
-  integrity sha512-Fcbi5lskAiSvs8qhdQBusANZWwyATdp7IxgHJTXiaU74sbVjX9uAw+myDPvI8pNo2wXKHECXCR63hqhRkN/SSQ==
+jose@^4.14.4:
+  version "4.14.4"
+  resolved "https://registry.npmjs.org/jose/-/jose-4.14.4.tgz#59e09204e2670c3164ee24cbfe7115c6f8bff9ca"
+  integrity sha512-j8GhLiKmUAh+dsFXlX1aJCbt5KMibuKb+d7j1JaOJG6s2UjX1PQlW+OKB/sD4a/5ZYF4RcmYmLSndOoU3Lt/3g==
 
 js-yaml@4.1.0:
   version "4.1.0"
@@ -1051,10 +1049,10 @@ mongodb-connection-string-url@^2.6.0:
     "@types/whatwg-url" "^8.2.1"
     whatwg-url "^11.0.0"
 
-mongodb@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.npmjs.org/mongodb/-/mongodb-5.3.0.tgz#9bef3ff35511a66fb7d9aafb7b06112787138db1"
-  integrity sha512-Wy/sbahguL8c3TXQWXmuBabiLD+iVmz+tOgQf+FwkCjhUIorqbAxRbbz00g4ZoN4sXIPwpAlTANMaGRjGGTikQ==
+mongodb@^5.4.0:
+  version "5.4.0"
+  resolved "https://registry.npmjs.org/mongodb/-/mongodb-5.4.0.tgz#ce217194b49572f32af5ddd9a1e3ae1282954795"
+  integrity sha512-6GDKgO7WiYUw+ILap143VXfAou06hjxDGgYUZWGnI4hgoZfP3el0G3l69JqJF8SEQbZmC+SN/2a0aWI/aWJoxA==
   dependencies:
     bson "^5.2.0"
     mongodb-connection-string-url "^2.6.0"
