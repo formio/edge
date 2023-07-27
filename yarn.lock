@@ -18,15 +18,15 @@
     debug "^4.3.4"
     jsonwebtoken "^9.0.0"
 
-"@formio/appserver-core@^1.3.6":
-  version "1.3.6"
-  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.3.6.tgz#b0304f464084098365674df297a4247e43bf07e0"
-  integrity sha512-vz/VhzG3IR8eJX1fwDS65fuU3HYYMcbxs0orJtfp8FThND4RHbOXzgROsggLaqPXId7kgQ0lfKCIi+KIuphRcA==
+"@formio/appserver-core@^1.3.7":
+  version "1.3.7"
+  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.3.7.tgz#3cc31178da4f5d60aad5bf340f74b19ca1a59a47"
+  integrity sha512-f0JW0kS1lMBlfN2d3sIUfqV/kGrAtqpiSYNVEp/iRP1Vj6CorvE40CSA8h4Lft0FF91OmjifDnW81qanU7BiXg==
   dependencies:
     "@formio/appserver-auth-jwt" "^1.0.1"
     "@formio/appserver-db-mongodb" "^1.0.4"
     "@formio/appserver-types" "^1.2.5"
-    "@formio/core" "^1.3.0-rc.12"
+    "@formio/core" "1.3.0-rc.16"
     "@formio/node-fetch-http-proxy" "^1.1.0"
     async "^3.2.4"
     bcryptjs "^2.4.3"
@@ -59,10 +59,10 @@
   resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-1.2.5.tgz#699818ddff8a252fef992dde2b634aa8de2675a4"
   integrity sha512-opMcXYzBNr88sSAjjQbQS9XvOQEp1poYfS4NlDWKZJXvynLjToC1G6YP9QW4b69nHlxqiP7Pw9jSmXCmIdT4tw==
 
-"@formio/core@^1.3.0-rc.12":
-  version "1.3.0-rc.12"
-  resolved "https://registry.npmjs.org/@formio/core/-/core-1.3.0-rc.12.tgz#7c416828becde9899c8c36c8210254fa3149da0c"
-  integrity sha512-/gXSb+TGMwBeuwA3WiuLYXdrmX6dIqU4/aBWPJ1QpJipvv+BvklAbgCDC1XUMsdduHd1VZwLwN/swkQJ0TtvAQ==
+"@formio/core@1.3.0-rc.16":
+  version "1.3.0-rc.16"
+  resolved "https://registry.npmjs.org/@formio/core/-/core-1.3.0-rc.16.tgz#372332cf0e8aa74889dc0be0fe0bbd7078013a63"
+  integrity sha512-btncuxFf1/Kw1PlX6rmnnqUEyz+KVOVFl4qcdacg/w7dDqxfOLx7FokRv1HHBCyI7mUk22c1V+Nko1IcEnVObQ==
   dependencies:
     "@formio/lodash" "0.1.0"
     "@types/json-logic-js" "^2.0.1"

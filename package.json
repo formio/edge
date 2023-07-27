@@ -30,7 +30,7 @@
   "homepage": "https://github.com/formio/appserver#readme",
   "dependencies": {
     "@formio/appserver-auth-jwt": "^1.0.1",
-    "@formio/appserver-core": "^1.3.6",
+    "@formio/appserver-core": "^1.3.7",
     "@formio/appserver-db-mongodb": "^1.0.4",
     "@formio/appserver-types": "^1.2.5",
     "async": "^3.2.4",
