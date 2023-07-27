@@ -1,5 +1,6 @@
 import { FormScope } from "./form";
 import { PrepScope, ProcessScope } from "./submission";
+import { OfflineLicenseStruct } from '@formio/license';
 export interface ProjectConfig {
     url: string;
     key: string;
@@ -37,6 +38,8 @@ export interface ServerConfig {
 }
 export interface DBConfig {
     url: string;
+    ttl?: number;
+    dropOnConnect?: boolean;
     config: any;
 }
 export interface ServerDB {
@@ -59,12 +62,6 @@ export interface ServerDB {
 export interface AuthModule {
     token: (user: AuthToken, secret: string, expire: number) => Promise<string>;
     user: (token: string, secret: string) => Promise<AuthToken | null>;
-}
-export interface LicenseTerms {
-    serverless: string[];
-}
-export interface LicenseKey {
-    terms: LicenseTerms;
 }
 export interface Processor {
     processors: Array<(scope: ProcessScope) => Promise<any[]>>;
@@ -91,7 +88,7 @@ export interface ServerScope {
     utils?: any;
     util?: any;
     hook?: (name: string, ...args: any[]) => void;
-    licenseKey?: LicenseKey;
+    licenseKey?: OfflineLicenseStruct;
 }
 export interface AppServerScope {
     config?: ServerConfig;

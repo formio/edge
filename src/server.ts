@@ -8,13 +8,11 @@ if (!licenseKey) {
     }
     catch (err) {
         console.log('No license key found. Please set the LICENSE_KEY environment variable or create a license.txt file in the root of the project.');
-        process.exit();
     }
 }
 
 import { Server as CoreServer } from '@formio/appserver-core';
-import { Auth } from "./auth";
-import { Database } from "./db";
+import { Database, Auth } from "./modules";
 import Actions from "./actions";
 import { Processor } from "./process";
 import { Prepper } from './prepare';
@@ -47,7 +45,7 @@ export class Server extends CoreServer {
         }
         super({
             db: config.db || new Modules.db({
-                url: get(process.env, 'MONGO', "mongodb://localhost:27017/subserver"),
+                url: get(process.env, 'MONGO', "mongodb://localhost:27017/appserver"),
                 config: get(process.env, 'MONGO_CONFIG', "{}")
             }),
             processor: Modules.processor,

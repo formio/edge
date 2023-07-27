@@ -1,0 +1,24 @@
+{
+  "name": "@formio/appserver-db-mongodb",
+  "version": "1.0.3",
+  "description": "The MongoDB Database layer for AppServer.",
+  "main": "lib/db.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "author": "",
+  "license": "OSL-3.0",
+  "dependencies": {
+    "@formio/appserver-types": "^1.2.3",
+    "debug": "^4.3.4",
+    "lodash": "^4.17.21",
+    "mongodb": "^5.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}

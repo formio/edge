@@ -42,10 +42,16 @@ export class Database implements ServerDB {
         this.prefix = prefix ? `${prefix}.` : '';
         try {
             debug('db.connect()');
-            const config = this.config.config ? JSON.parse(this.config.config) : {};
+            let config = {};
+            if (this.config.config) {
+                config = (typeof this.config.config === 'string') ? JSON.parse(this.config.config) : this.config.config;
+            }
             const client = new MongoClient(this.config.url, config);
             await client.connect();
             this.db = await client.db();
+            if (this.config.dropOnConnect) {
+                await this.db.dropDatabase();
+            }
             this.addIndex(this.db.collection(this.collectionName('project')), 'name');
             this.defaultCollection = this.db.collection(this.collectionName('submissions'));
             await this.setupIndexes(this.defaultCollection);
@@ -152,7 +158,25 @@ export class Database implements ServerDB {
         this.addIndex(collection, 'form');
         this.addIndex(collection, 'deleted');
         this.addIndex(collection, 'modified');
-        this.addIndex(collection, 'created');
+
+        // If TTL index is needed add that here.
+        if (this.config.ttl) {
+            try {
+                collection.createIndex({
+                    created: 1
+                }, {
+                    background: true,
+                    expireAfterSeconds: this.config.ttl
+                });
+            }
+            catch (err: any) {
+                error('Cannot add TTL index', err.message);
+            }
+        }
+        else {
+            this.addIndex(collection, 'created');
+        }
+
         if (scope && scope.form && scope.form.components) {
             scope.utils.eachComponent(scope.form.components, (component: any, components: any[], path: string) => {
                 if (component.dbIndex) {

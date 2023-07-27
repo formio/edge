@@ -4,7 +4,11 @@
   "description": "A highly performant and extensible Application Server for Form.io Multi-Tenant Deployments.",
   "main": "server.js",
   "scripts": {
-    "build": "cd src/types && npm run build && cd ../.. && tsc",
+    "build:types": "cd src/types && npm run build && cd ../..",
+    "build:db": "cd src/modules/db && npm run build && cd ../../..",
+    "build:auth": "cd src/modules/auth && npm run build && cd ../../..",
+    "build:modules": "npm run build:db && npm run build:auth",
+    "build": "npm run build:types && npm run build:modules && tsc",
     "test": "mocha -r ts-node/register 'src/**/*.spec.ts'",
     "prepack": "npm run build"
   },
@@ -25,7 +29,9 @@
   ],
   "homepage": "https://github.com/formio/appserver#readme",
   "dependencies": {
+    "@formio/appserver-auth-jwt": "^1.0.0",
     "@formio/appserver-core": "^1.3.5",
+    "@formio/appserver-db-mongodb": "^1.0.2",
     "@formio/appserver-types": "^1.2.3",
     "async": "^3.2.4",
     "bcryptjs": "^2.4.3",
@@ -33,8 +39,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
-    "lodash": "^4.17.21",
-    "mongodb": "^5.4.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@types/async": "^3.2.20",
