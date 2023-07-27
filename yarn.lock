@@ -9,21 +9,23 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@formio/appserver-auth-jwt@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@formio/appserver-auth-jwt/-/appserver-auth-jwt-1.0.0.tgz#c1f6875f64ce7846a658d03e7edf15f047ee5286"
-  integrity sha512-5vGyW2oLksu2M7Dgw1DEoBFb3+pd/PtLjrmv+OH5q+b94fhIjHut16NOm6M8bSPGRZIlaXxZSDoznCZPJTHMJw==
+"@formio/appserver-auth-jwt@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@formio/appserver-auth-jwt/-/appserver-auth-jwt-1.0.1.tgz#42cd40359baa0fe5ff845d837b0a8ac01f56ad48"
+  integrity sha512-7l9eI+q4TzLotkT77+xbkK/ofQUN+EQWFxopf7mjTClF6lbxZJx8uUUn/6F+BZtTR/+lVsxJSoboV/Q1Lnj3jw==
   dependencies:
-    "@formio/appserver-types" "^1.2.3"
+    "@formio/appserver-types" "^1.2.5"
     debug "^4.3.4"
     jsonwebtoken "^9.0.0"
 
-"@formio/appserver-core@^1.3.5":
-  version "1.3.5"
-  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.3.5.tgz#5077f8e4abe0c100ca3c4b60b008a7ac127cd743"
-  integrity sha512-XjlPRWmtTAvmx13c3MlgNWa47GR2dovS6Y2bArXG0JvbuVbFmBsgb7PhbTEyrk+he9wSU//Q9IaP2sZ5RBp1Ww==
+"@formio/appserver-core@^1.3.6":
+  version "1.3.6"
+  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.3.6.tgz#b0304f464084098365674df297a4247e43bf07e0"
+  integrity sha512-vz/VhzG3IR8eJX1fwDS65fuU3HYYMcbxs0orJtfp8FThND4RHbOXzgROsggLaqPXId7kgQ0lfKCIi+KIuphRcA==
   dependencies:
-    "@formio/appserver-types" "^1.2.3"
+    "@formio/appserver-auth-jwt" "^1.0.1"
+    "@formio/appserver-db-mongodb" "^1.0.4"
+    "@formio/appserver-types" "^1.2.5"
     "@formio/core" "^1.3.0-rc.12"
     "@formio/node-fetch-http-proxy" "^1.1.0"
     async "^3.2.4"
@@ -42,22 +44,20 @@
     vm2 "^3.9.17"
     xss "^1.0.14"
 
-"@formio/appserver-db-mongodb@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/@formio/appserver-db-mongodb/-/appserver-db-mongodb-1.0.2.tgz#1f916c4dcb997f5fa1424fe79edcd6ea39e69f72"
-  integrity sha512-PV37+XvaUXzNxZRCdWJ3PrqE4hqSCtGQxq0sQHCLCNMMPl/k68WReSh0v5aNR8S3b6Zj4pZw6wnZ5tCbYqPatw==
+"@formio/appserver-db-mongodb@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/@formio/appserver-db-mongodb/-/appserver-db-mongodb-1.0.4.tgz#bbeb6cc5d0b56ebead2586b8b987d6b43ab06569"
+  integrity sha512-UixKSpZPTwO97O1FUo4jCX00cHVv95QAKH2dG3wswFytYWP75XFn4ltUG2uWySOQtJeZJTdAkF9xqsosR7uHdw==
   dependencies:
-    "@formio/appserver-types" "^1.2.3"
+    "@formio/appserver-types" "^1.2.5"
     debug "^4.3.4"
     lodash "^4.17.21"
     mongodb "^5.5.0"
 
-"@formio/appserver-types@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-1.2.3.tgz#b3335708cc080615d4b1e07edab1e902e684cf72"
-  integrity sha512-MSlxgUglo1hJbGD+1ju19cJ/VZHkB6Pszby81/lbJsT/q8URUb4XJbqdO93XJgp1yC87lzuf9j5gYBCf3d05vQ==
-  dependencies:
-    express "^4.18.2"
+"@formio/appserver-types@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-1.2.5.tgz#699818ddff8a252fef992dde2b634aa8de2675a4"
+  integrity sha512-opMcXYzBNr88sSAjjQbQS9XvOQEp1poYfS4NlDWKZJXvynLjToC1G6YP9QW4b69nHlxqiP7Pw9jSmXCmIdT4tw==
 
 "@formio/core@^1.3.0-rc.12":
   version "1.3.0-rc.12"

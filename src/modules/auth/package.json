@@ -1,6 +1,6 @@
 {
   "name": "@formio/appserver-auth-jwt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JWT Authentication for the AppServer",
   "main": "lib/auth.js",
   "files": [
@@ -13,7 +13,7 @@
   "author": "",
   "license": "OSL-3.0",
   "dependencies": {
-    "@formio/appserver-types": "^1.2.3",
+    "@formio/appserver-types": "^1.2.5",
     "debug": "^4.3.4",
     "jsonwebtoken": "^9.0.0"
   },
