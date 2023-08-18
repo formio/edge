@@ -525,10 +525,10 @@
     debug "^4.3.4"
     jsonwebtoken "^9.0.0"
 
-"@formio/appserver-core@^1.4.5":
-  version "1.4.5"
-  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.4.5.tgz#580c7d72c9d002418f2a5e664cd00ce15086877e"
-  integrity sha512-uG393a/Dah8DoiTs4VsLcy52uv3xhzNZUPdjLKsbA0LtuDhCykVpatvWYGZx1mxupJNzymQr/B8OM9R/vT6Mug==
+"@formio/appserver-core@^1.4.6":
+  version "1.4.6"
+  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.4.6.tgz#64cdeaaccd8673b67e7da4f3124c82ccd6ed3125"
+  integrity sha512-lSdYyDjw0ZcDB177fr0DTEerR1MkHPTp6kGo6r169yErvEAxq69w6XgDOzeWqWsFsv+5UR1eX7SDDceNaN+xJg==
   dependencies:
     "@formio/appserver-auth-jwt" "^1.0.1"
     "@formio/appserver-db-mongodb" "^1.0.4"
