@@ -387,7 +387,7 @@ export class Database implements ServerDB {
             if (!collection) {
                 return null;
             }
-            return await collection.findOne(this.query(scope, {_id: id}));
+            return await collection.findOne(this.query(scope, {_id: this.ObjectId(id)}));
         }
         catch (err: any) {
             error(err.message);
@@ -412,7 +412,7 @@ export class Database implements ServerDB {
             if (!collection) {
                 return null;
             }
-            const result = await collection.updateOne(this.query(scope, {_id: id}), { 
+            const result = await collection.updateOne(this.query(scope, {_id: this.ObjectId(id)}), { 
                 $set: pick(update, ['data', 'metadata', 'modified'].concat(allowFields)) 
             });
             if (result.modifiedCount === 0) {
@@ -439,7 +439,7 @@ export class Database implements ServerDB {
             if (!collection) {
                 return false;
             }
-            const result = await collection.updateOne(this.query(scope, {_id: id}), { $set: {deleted: Date.now()} });
+            const result = await collection.updateOne(this.query(scope, {_id: this.ObjectId(id)}), { $set: {deleted: Date.now()} });
             return result.modifiedCount > 0;
         }
         catch (err: any) {

@@ -525,10 +525,10 @@
     debug "^4.3.4"
     jsonwebtoken "^9.0.0"
 
-"@formio/appserver-core@^1.4.6":
-  version "1.4.6"
-  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.4.6.tgz#64cdeaaccd8673b67e7da4f3124c82ccd6ed3125"
-  integrity sha512-lSdYyDjw0ZcDB177fr0DTEerR1MkHPTp6kGo6r169yErvEAxq69w6XgDOzeWqWsFsv+5UR1eX7SDDceNaN+xJg==
+"@formio/appserver-core@^1.4.8":
+  version "1.4.8"
+  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-1.4.8.tgz#d6ab5dce00f8b91316f9479c116247e1eb73c5c4"
+  integrity sha512-DreFZIafg52oZu5PyfM1wWvq/gBQd+500CsEjDVy9/C/OMiGcBPzoJ39hM29gYEONBjuLrepuFhlHJrqvo6vxw==
   dependencies:
     "@formio/appserver-auth-jwt" "^1.0.1"
     "@formio/appserver-db-mongodb" "^1.0.4"
@@ -549,6 +549,7 @@
     lodash "^4.17.21"
     node-cache "^5.1.2"
     nodemailer "^6.9.1"
+    statuses "^2.0.1"
     vm2 "^3.9.17"
     xss "^1.0.14"
 
@@ -3855,7 +3856,7 @@ stack-trace@0.0.x:
   resolved "https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
   integrity sha512-KGzahc7puUKkzyMt+IqAep+TVNbKP+k2Lmwhub39m1AsTSkaDutx56aDCo+HLDzf/D26BIHTJWNiTG1KAJiQCg==
 
-statuses@2.0.1:
+statuses@2.0.1, statuses@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz#55cb000ccf1d48728bd23c685a063998cf1a1b63"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==

@@ -1,4 +1,3 @@
-/// <reference types="express" />
 import { Server as CoreServer } from '@formio/appserver-core';
 import { Database, Auth } from "./modules";
 import Actions from "./actions";

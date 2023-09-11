@@ -400,7 +400,7 @@ class Database {
                 if (!collection) {
                     return null;
                 }
-                return yield collection.findOne(this.query(scope, { _id: id }));
+                return yield collection.findOne(this.query(scope, { _id: this.ObjectId(id) }));
             }
             catch (err) {
                 error(err.message);
@@ -426,7 +426,7 @@ class Database {
                 if (!collection) {
                     return null;
                 }
-                const result = yield collection.updateOne(this.query(scope, { _id: id }), {
+                const result = yield collection.updateOne(this.query(scope, { _id: this.ObjectId(id) }), {
                     $set: (0, pick_1.default)(update, ['data', 'metadata', 'modified'].concat(allowFields))
                 });
                 if (result.modifiedCount === 0) {
@@ -454,7 +454,7 @@ class Database {
                 if (!collection) {
                     return false;
                 }
-                const result = yield collection.updateOne(this.query(scope, { _id: id }), { $set: { deleted: Date.now() } });
+                const result = yield collection.updateOne(this.query(scope, { _id: this.ObjectId(id) }), { $set: { deleted: Date.now() } });
                 return result.modifiedCount > 0;
             }
             catch (err) {

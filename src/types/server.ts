@@ -1,3 +1,4 @@
+import { Router } from "express";
 import { FormScope } from "./form";
 import { PrepScope, ProcessScope } from "./submission";
 import { OfflineLicenseStruct } from '@formio/license';

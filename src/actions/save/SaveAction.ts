@@ -174,6 +174,25 @@ export const SaveAction = {
                         description: "Available variables are submission and data (data is already transformed by simple mappings)."
                     }
                 ]
+            },
+            {
+                type: 'panel',
+                title: 'Response Mapping',
+                key: 'responseMappingPanel',
+                components: [
+                    {
+                        input: true,
+                        label: "Response Mapping",
+                        key: "response",
+                        placeholder: "/** Example Code **/\nresponse = submission;",
+                        rows: 8,
+                        defaultValue: "",
+                        persistent: true,
+                        editor: "ace",
+                        type: "textarea",
+                        description: "Manually perform a mapping of the response being made back to the client. The 'body' is the res.body sent to the client. You can use any standard evaluation context variables (form, submission, etc)."
+                    }
+                ]
             }
         ];
     },
@@ -262,6 +281,23 @@ export const SaveAction = {
                     resource: action.settings.resource,
                     id: res.resource.item._id.toString()
                 });
+            }
+            
+            // Allow for a response mapping.
+            if (action.settings.response) {
+                try {
+                    res.resource.item = scope.utils.evaluate(
+                        action.settings.response,
+                        scope.utils.evalContext({
+                            ...scope,
+                            response: res.resource.item
+                        }, req, res),
+                        'response'
+                    );
+                }
+                catch (err: any) {
+                    console.log(`Error in mapping transform: ${err.message}`);
+                }
             }
         }
     },
