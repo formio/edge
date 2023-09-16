@@ -253,11 +253,17 @@ export class Database implements ServerDB {
      * @param {*} table 
      * @param {*} query 
      */
-    async index(scope: FormScope, query = {}) {
+    async index(scope: FormScope, query: any = {}) {
         let items;
         try {
+            const limit = query.limit || 10;
+            const skip = query.skip || 0;
+            const sort = query.sort || {created: -1};
+            delete query.limit;
+            delete query.skip;
+            delete query.sort;
             debug('db.index()', query);
-            items = await this.find(scope, query);
+            items = await this.find(scope, query, limit, skip, sort);
         }
         catch (err: any) {
             error(err.message);
@@ -341,14 +347,14 @@ export class Database implements ServerDB {
     /**
      * Find many records that match a query.
      */
-    async find(scope: FormScope, query: any = {}) {
+    async find(scope: FormScope, query: any = {}, limit: number = 10, skip: number = 0, sort: any = {created: -1}) {
         try {
             debug('db.find()', query);
             const collection: Collection<Document> | null = await this.formCollection(scope);
             if (!collection) {
                 return [];
             }
-            return await collection.find(this.query(scope, query)).toArray();
+            return await collection.find(this.query(scope, query)).limit(limit).skip(skip).sort(sort).toArray();
         }
         catch (err: any) {
             error(err.message);

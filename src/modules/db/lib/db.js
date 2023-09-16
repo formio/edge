@@ -267,8 +267,14 @@ class Database {
         return __awaiter(this, void 0, void 0, function* () {
             let items;
             try {
+                const limit = query.limit || 10;
+                const skip = query.skip || 0;
+                const sort = query.sort || { created: -1 };
+                delete query.limit;
+                delete query.skip;
+                delete query.sort;
                 debug('db.index()', query);
-                items = yield this.find(scope, query);
+                items = yield this.find(scope, query, limit, skip, sort);
             }
             catch (err) {
                 error(err.message);
@@ -351,7 +357,7 @@ class Database {
     /**
      * Find many records that match a query.
      */
-    find(scope, query = {}) {
+    find(scope, query = {}, limit = 10, skip = 0, sort = { created: -1 }) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 debug('db.find()', query);
@@ -359,7 +365,7 @@ class Database {
                 if (!collection) {
                     return [];
                 }
-                return yield collection.find(this.query(scope, query)).toArray();
+                return yield collection.find(this.query(scope, query)).limit(limit).skip(skip).sort(sort).toArray();
             }
             catch (err) {
                 error(err.message);
