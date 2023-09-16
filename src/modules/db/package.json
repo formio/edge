@@ -1,6 +1,6 @@
 {
   "name": "@formio/appserver-db-mongodb",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The MongoDB Database layer for AppServer.",
   "main": "lib/db.js",
   "files": [

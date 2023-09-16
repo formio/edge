@@ -317,7 +317,7 @@ export class Database implements ServerDB {
      * @param {*} id 
      * @returns 
      */
-    query(scope: FormScope, query: any = {}) {
+    query(scope: FormScope, query: any = {}, subQuery = false) {
         if (query._id) {
             query._id = this.ObjectId(query._id);
         }
@@ -327,18 +327,20 @@ export class Database implements ServerDB {
         if (query.form) {
             query.form = this.ObjectId(query.form);
         }
-        else if (scope.form && scope.form._id) {
+        else if (!subQuery && scope.form && scope.form._id) {
             query.form = this.ObjectId(scope.form._id);
         }
-        if (scope.project && scope.project._id) {
+        if (!subQuery && scope.project && scope.project._id) {
             query.project = this.ObjectId(scope.project._id);
         }
-        query.deleted = {$eq: null};
+        if (!subQuery) {
+            query.deleted = {$eq: null};
+        }
 
         // Handle nested queries.
         ['$or', '$and'].forEach((key) => {
             if (query[key]) {
-                query[key].forEach((subQuery: any) => this.query(scope, subQuery));
+                query[key].forEach((subQuery: any) => this.query(scope, subQuery, true));
             }
         });
         return query;

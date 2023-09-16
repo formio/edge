@@ -563,6 +563,16 @@
     lodash "^4.17.21"
     mongodb "^5.5.0"
 
+"@formio/appserver-db-mongodb@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/@formio/appserver-db-mongodb/-/appserver-db-mongodb-1.0.5.tgz#a2011b511f1bd5c93c8351973282c38261208d3f"
+  integrity sha512-oElJMeKZNriAaMyBQ+BOY0ktf1WbKKkVLO5u6SifMMKCa6Cw1998bazMAt0qZin3uaAqOlure2YNEL1zNGL/yw==
+  dependencies:
+    "@formio/appserver-types" "^1.2.5"
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    mongodb "^5.5.0"
+
 "@formio/appserver-types@^1.2.5":
   version "1.2.5"
   resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-1.2.5.tgz#699818ddff8a252fef992dde2b634aa8de2675a4"

@@ -67,7 +67,7 @@ export declare class Database implements ServerDB {
      * @param {*} id
      * @returns
      */
-    query(scope: FormScope, query?: any): any;
+    query(scope: FormScope, query?: any, subQuery?: boolean): any;
     /**
      * Find many records that match a query.
      */
