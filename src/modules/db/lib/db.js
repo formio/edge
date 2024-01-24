@@ -265,21 +265,53 @@ class Database {
      */
     index(scope, query = {}) {
         return __awaiter(this, void 0, void 0, function* () {
-            let items;
+            let items, skip, limit, count;
             try {
-                const limit = query.limit || 10;
-                const skip = query.skip || 0;
+                limit = query.limit || 10;
+                skip = query.skip || 0;
                 const sort = query.sort || { created: -1 };
+                let project = {};
+                if (query.select) {
+                    const fields = query.select.split(',');
+                    fields.forEach((field) => {
+                        project[field] = true;
+                    });
+                }
                 delete query.limit;
                 delete query.skip;
                 delete query.sort;
+                delete query.select;
                 debug('db.index()', query);
-                items = yield this.find(scope, query, limit, skip, sort);
+                items = yield this.find(scope, query, limit, skip, sort, project);
+                count = yield this.count(scope, query);
             }
             catch (err) {
                 error(err.message);
             }
-            return items;
+            return { items, limit, skip, count };
+        });
+    }
+    /**
+     * Perform a count of the amount of documents within a collection.
+     * @param scope
+     * @param query
+     * @returns
+     */
+    count(scope, query = {}) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let count = 0;
+            try {
+                debug('db.count()', query);
+                const collection = yield this.formCollection(scope);
+                if (!collection) {
+                    return 0;
+                }
+                count = yield collection.countDocuments(this.query(scope, query));
+            }
+            catch (err) {
+                error(err.message);
+            }
+            return count;
         });
     }
     /**
@@ -359,7 +391,7 @@ class Database {
     /**
      * Find many records that match a query.
      */
-    find(scope, query = {}, limit = 10, skip = 0, sort = { created: -1 }) {
+    find(scope, query = {}, limit = 10, skip = 0, sort = { created: -1 }, select = {}) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 debug('db.find()', query);
@@ -367,7 +399,8 @@ class Database {
                 if (!collection) {
                     return [];
                 }
-                return yield collection.find(this.query(scope, query)).limit(limit).skip(skip).sort(sort).toArray();
+                query = this.query(scope, query);
+                return yield collection.find(query).limit(limit).skip(skip).sort(sort).project(select).toArray();
             }
             catch (err) {
                 error(err.message);

@@ -254,21 +254,52 @@ export class Database implements ServerDB {
      * @param {*} query 
      */
     async index(scope: FormScope, query: any = {}) {
-        let items;
+        let items, skip, limit, count;
         try {
-            const limit = query.limit || 10;
-            const skip = query.skip || 0;
+            limit = query.limit || 10;
+            skip = query.skip || 0;
             const sort = query.sort || {created: -1};
+            let project: any = {};
+            if (query.select) {
+                const fields = query.select.split(',');
+                fields.forEach((field: string) => {
+                    project[field] = true;
+                });
+            }
             delete query.limit;
             delete query.skip;
             delete query.sort;
+            delete query.select;
             debug('db.index()', query);
-            items = await this.find(scope, query, limit, skip, sort);
+            items = await this.find(scope, query, limit, skip, sort, project);
+            count = await this.count(scope, query);
         }
         catch (err: any) {
             error(err.message);
         }
-        return items;
+        return {items, limit, skip, count};
+    }
+
+    /**
+     * Perform a count of the amount of documents within a collection.
+     * @param scope
+     * @param query
+     * @returns 
+     */
+    async count(scope: FormScope, query: any = {}) {
+        let count = 0;
+        try {
+            debug('db.count()', query);
+            const collection: Collection<Document> | null = await this.formCollection(scope);
+            if (!collection) {
+                return 0;
+            }
+            count = await collection.countDocuments(this.query(scope, query));
+        }
+        catch (err: any) {
+            error(err.message);
+        }
+        return count;
     }
 
     /**
@@ -349,14 +380,21 @@ export class Database implements ServerDB {
     /**
      * Find many records that match a query.
      */
-    async find(scope: FormScope, query: any = {}, limit: number = 10, skip: number = 0, sort: any = {created: -1}) {
+    async find(
+        scope: FormScope,
+        query: any = {},
+        limit: number = 10,
+        skip: number = 0,
+        sort: any = {created: -1},
+        select: any = {}
+    ) {
         try {
             debug('db.find()', query);
             const collection: Collection<Document> | null = await this.formCollection(scope);
             if (!collection) {
                 return [];
             }
-            return await collection.find(this.query(scope, query)).limit(limit).skip(skip).sort(sort).toArray();
+            return await collection.find(this.query(scope, query)).limit(limit).skip(skip).sort(sort).project(select).toArray();
         }
         catch (err: any) {
             error(err.message);

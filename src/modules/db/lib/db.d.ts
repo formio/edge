@@ -56,7 +56,19 @@ export declare class Database implements ServerDB {
      * @param {*} table
      * @param {*} query
      */
-    index(scope: FormScope, query?: any): Promise<import("mongodb").WithId<Document>[] | undefined>;
+    index(scope: FormScope, query?: any): Promise<{
+        items: import("bson").Document[] | undefined;
+        limit: any;
+        skip: any;
+        count: number | undefined;
+    }>;
+    /**
+     * Perform a count of the amount of documents within a collection.
+     * @param scope
+     * @param query
+     * @returns
+     */
+    count(scope: FormScope, query?: any): Promise<number>;
     /**
      * Create a new record.
      */
@@ -71,7 +83,7 @@ export declare class Database implements ServerDB {
     /**
      * Find many records that match a query.
      */
-    find(scope: FormScope, query?: any, limit?: number, skip?: number, sort?: any): Promise<import("mongodb").WithId<Document>[]>;
+    find(scope: FormScope, query?: any, limit?: number, skip?: number, sort?: any, select?: any): Promise<import("bson").Document[]>;
     /**
      * Find a record for a provided query.
      */
