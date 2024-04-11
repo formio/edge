@@ -1,6 +1,6 @@
 {
   "name": "@formio/appserver-db-mongodb",
-  "version": "2.0.0-dev.6",
+  "version": "2.0.0-dev.7",
   "description": "The MongoDB Database layer for AppServer.",
   "main": "lib/db.js",
   "files": [
@@ -13,13 +13,13 @@
   "author": "",
   "license": "OSL-3.0",
   "dependencies": {
-    "@formio/appserver-types": "^2.0.0-dev.4",
-    "@formio/core": "^2.0.0-rc.18",
+    "@formio/appserver-types": "^2.0.0-dev.6",
+    "@formio/core": "^2.0.0-rc.24",
     "debug": "^4.3.4",
     "lodash": "^4.17.21",
     "mongodb": "^6.5.0"
   },
   "devDependencies": {
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.5"
   }
 }

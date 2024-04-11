@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@formio/appserver-types@^2.0.0-dev.4":
-  version "2.0.0-dev.4"
-  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-2.0.0-dev.4.tgz#ecded970b170bf57200f41f33ce4fe42f0d4cc96"
-  integrity sha512-rQP52NsY9yaNOEWqEv7vQXCzXdTjLHnTZ1oLi7z3uY4ySH01HBWmxiyWvn6MO4ITNmacpio4RlWPtBqY19tEFQ==
+"@formio/appserver-types@^2.0.0-dev.6":
+  version "2.0.0-dev.6"
+  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-2.0.0-dev.6.tgz#0f48999d2d965289bd76fa5f2c54877715255e4a"
+  integrity sha512-LuC3LMLU4HI0pYu40xyCAGzRDnAB4yo9cWa+uIN3H8N7NkEqGt3KdjxZh8C2JbWCzJnEXFuMedlZG+Bm15fBUA==
   dependencies:
-    "@formio/core" "^2.0.0-rc.18"
+    "@formio/core" "^2.0.0-rc.24"
 
-"@formio/core@^2.0.0-rc.18":
-  version "2.0.0-rc.18"
-  resolved "https://registry.npmjs.org/@formio/core/-/core-2.0.0-rc.18.tgz#14cea364d39854023b02dc59f2d0b8adafeef70b"
-  integrity sha512-MwKt9RVrnNwjtHbmAOTYC2jlrV6R5BKCOfnKTpoujhO8l+Dlfh3g7fr2WSVTCu8J0VfelgJbI0f+Yk4ayXGYLQ==
+"@formio/core@^2.0.0-rc.24":
+  version "2.0.0-tt.dev-882e7ea"
+  resolved "https://registry.npmjs.org/@formio/core/-/core-2.0.0-tt.dev-882e7ea.tgz#200d6a377b430a1e4e3b27513f392abd739e3063"
+  integrity sha512-PMYCqbP5dSPvWOBMd3KeLiBaBFyXH1J/+QVLum5CtYbEg1UaAXET9T9lh5H1dHyudh2JbTK1Zx/96MkHhi6/pA==
   dependencies:
     "@types/json-logic-js" "^2.0.5"
     browser-cookies "^1.2.0"
@@ -217,10 +217,10 @@ tr46@~0.0.3:
   resolved "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
 
-typescript@^5.4.2:
-  version "5.4.2"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-5.4.2.tgz#0ae9cebcfae970718474fe0da2c090cad6577372"
-  integrity sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==
+typescript@^5.4.5:
+  version "5.4.5"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-5.4.5.tgz#42ccef2c571fdbd0f6718b1d1f5e6e5ef006f611"
+  integrity sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
