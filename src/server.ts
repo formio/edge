@@ -1,13 +1,13 @@
 // Load the license key.
 import fs from 'fs';
 import get from 'lodash/get';
-let licenseKey = get(process.env, 'LICENSE_KEY', '');
+let licenseKey = get(process.env, 'APPSERVER_LICENSE', get(process.env, 'LICENSE_KEY', ''));
 if (!licenseKey) {
     try {
         licenseKey = fs.readFileSync(path.join(cwd(), 'license.txt'), 'utf8');
     }
     catch (err) {
-        console.log('No license key found. Please set the LICENSE_KEY environment variable or create a license.txt file in the root of the project.');
+        console.log('No license key found. Please set the APPSERVER_LICENSE environment variable or create a license.txt file in the root of the project.');
     }
 }
 

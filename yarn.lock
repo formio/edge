@@ -525,16 +525,16 @@
     debug "^4.3.4"
     jsonwebtoken "^9.0.2"
 
-"@formio/appserver-core@^2.0.0-dev.7":
-  version "2.0.0-dev.7"
-  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-2.0.0-dev.7.tgz#5faaf1544d74fe2db90cd8869d428bcbc079d61a"
-  integrity sha512-Ij02KVFqKH+P5pOQfBVF/UNR5mV0hfaqQA8Vx+rQVrelb8J7MBpB1s5N8IOhxLhGNXd+U9BG+wecsFpwlg4M+Q==
+"@formio/appserver-core@^2.0.0-dev.8":
+  version "2.0.0-dev.8"
+  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-2.0.0-dev.8.tgz#8c3d143228cd452c25929177f81d1729aa020151"
+  integrity sha512-KSge5aV0uxocAzPvSz3P7CnaitScZO8ziCMn7fLkLyAabO9sGN+Q0QOr21WYRZ4SVpX7hPrDyGjwspuMsQoyzQ==
   dependencies:
     "@formio/appserver-auth-jwt" "^2.0.0-dev.7"
     "@formio/appserver-db-mongodb" "^2.0.0-dev.7"
     "@formio/appserver-types" "^2.0.0-dev.6"
     "@formio/core" "^2.0.0-rc.24"
-    "@formio/license" "^1.4.2"
+    "@formio/license" "^2.0.0-dev.1"
     "@formio/node-fetch-http-proxy" "^1.1.0"
     "@formio/vm" "^0.0.7-rc.18"
     async "^3.2.5"
@@ -622,10 +622,10 @@
     lodash "^4.17.21"
     moment "^2.29.4"
 
-"@formio/license@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.npmjs.org/@formio/license/-/license-1.4.2.tgz#55c1303245fa14ba54215194917eae5aae614cc7"
-  integrity sha512-qQ2SMPe9qDZ2ON63J7DCNkhor1Gw4omIFNEAIr1Xgs9JALI1kso13AefIi9d8zL7W58W8mKAPuLpA1mI3tNXWw==
+"@formio/license@^2.0.0-dev.1":
+  version "2.0.0-rc.2"
+  resolved "https://registry.npmjs.org/@formio/license/-/license-2.0.0-rc.2.tgz#70cb5030c41ce7c80cf303b84b42dad60dfc82fe"
+  integrity sha512-zp09WOLbux1hWh2XBpGen60RSUNoVsLYOv790JeYNnoqtW02zUNWWcgwhRb159oZnDzp+gWrsZJWX3w9E8LAeA==
   dependencies:
     debug "^4.3.4"
     formio "^3.0.1"

@@ -1,6 +1,6 @@
 {
   "name": "@formio/appserver",
-  "version": "2.0.0-dev.8",
+  "version": "2.0.0-dev.9",
   "description": "A highly performant and extensible Application Server for Form.io Multi-Tenant Deployments.",
   "main": "server.js",
   "scripts": {
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/formio/appserver#readme",
   "dependencies": {
     "@formio/appserver-auth-jwt": "^2.0.0-dev.7",
-    "@formio/appserver-core": "^2.0.0-dev.7",
+    "@formio/appserver-core": "^2.0.0-dev.8",
     "@formio/appserver-db-mongodb": "^2.0.0-dev.7",
     "@formio/appserver-types": "^2.0.0-dev.6",
     "@formio/core": "^2.0.0-rc.24",
