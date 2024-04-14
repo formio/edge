@@ -1,6 +1,6 @@
 {
   "name": "@formio/appserver-types",
-  "version": "2.0.0-dev.6",
+  "version": "2.0.0-dev.8",
   "description": "The types for the appserver.",
   "main": "lib/index.js",
   "files": [

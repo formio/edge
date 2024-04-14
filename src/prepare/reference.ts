@@ -1,6 +1,7 @@
 import { set, get } from 'lodash';
 import { PrepScope } from '@formio/appserver-types';
 import protect from './protect';
+import { Utils } from '@formio/core';
 
 const getResource = (scope: PrepScope) => {
     const { component } = scope;
@@ -41,9 +42,9 @@ export const referenceLoad = async (scope: PrepScope) => {
                             ...context,
                             component: comp,
                             row: compRow,
-                            data: compData,
-                            value: get(compRow, comp.key),
-                            path: compPath
+                            data: context.data,
+                            value: get(compData, compPath),
+                            path: Utils.getComponentAbsolutePath(comp)
                         });
                 });
                 submission.data = context.data;

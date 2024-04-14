@@ -29,7 +29,7 @@ export const Prepper: PrepperType = {
         const { type, form, submission } = scope;
         try {
             debug(`Preparing data for ${form.name}...`);
-            await scope.utils.eachComponentData(form.components, submission.data, async (component: any, compData: any, compRow: any, compPath: string) => {
+            await scope.utils.eachComponentDataAsync(form.components, submission.data, async (component: any, compData: any, compRow: any, compPath: string) => {
                 if (Prepper.preppers.hasOwnProperty(type)) {
                     for (let i = 0; i < (Prepper.preppers as any)[type].length; i++) {
                         await (Prepper.preppers as any)[type][i]({
