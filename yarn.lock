@@ -520,18 +520,18 @@
     debug "^4.3.4"
     jsonwebtoken "^9.0.2"
 
-"@formio/appserver-core@^2.0.0-dev.14":
-  version "2.0.0-dev.14"
-  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-2.0.0-dev.14.tgz#2406e234e0ad0d0a7e1d455d05d8e6ce70dcfe03"
-  integrity sha512-uG8oCy5j6guo6ET84DTcJXN3h9YVtp4SJN3VpqvrMzWoVmp3WMq3Ttis7cPOLXphihhxWi655jkP7I86cTlfoA==
+"@formio/appserver-core@^2.0.0-dev.16":
+  version "2.0.0-dev.16"
+  resolved "https://registry.npmjs.org/@formio/appserver-core/-/appserver-core-2.0.0-dev.16.tgz#048af9d49f4ef2b129df859e4e95afdc941f2d72"
+  integrity sha512-cplxVnfIraguJMwOAv9My0qLlIzGVIjkGb1eSSXU6aSoGidZYOptju1rmVtPwJJFogpmDmXioNuBG5Zr3v8qWA==
   dependencies:
     "@formio/appserver-auth-jwt" "^2.0.0-dev.7"
     "@formio/appserver-db-mongodb" "^2.0.0-dev.7"
     "@formio/appserver-types" "^2.0.0-dev.8"
-    "@formio/core" "^2.0.0-rc.24"
+    "@formio/core" "2.0.0"
     "@formio/license" "^2.0.0-dev.3"
     "@formio/node-fetch-http-proxy" "^1.1.0"
-    "@formio/vm" "^0.0.7-rc.18"
+    "@formio/vm" "0.0.7"
     async "^3.2.5"
     bcryptjs "^2.4.3"
     body-parser "^1.20.1"
@@ -583,10 +583,10 @@
     fuse.js "^6.6.2"
     redux "^4.2.0"
 
-"@formio/core@2.0.0-rc.30":
-  version "2.0.0-rc.30"
-  resolved "https://registry.npmjs.org/@formio/core/-/core-2.0.0-rc.30.tgz#84b455fb5bedb4624c11e7875a7aa46d4bcc1c04"
-  integrity sha512-AnslmckteqgruCJalZC/18u1VvvpnJl7sXGLQPgB9lto1wOPmQMdQ/LecJBP8MC6z2s8PEDSXLRnWLuNTEYgAw==
+"@formio/core@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@formio/core/-/core-2.0.0.tgz#94035bc3d1507ba1531fff8e37fe40501c90182f"
+  integrity sha512-VZGzW5NJ2nOyJVkMirbXZbf2cS2NbMogGeQZSyEA/CT3KU3W1eT5BdEtBzGen1FvyNqhtRUaowPEEDwgVhj9VA==
   dependencies:
     "@types/json-logic-js" "^2.0.5"
     browser-cookies "^1.2.0"
@@ -655,12 +655,12 @@
   resolved "https://registry.npmjs.org/@formio/vanilla-text-mask/-/vanilla-text-mask-5.1.1-formio.1.tgz#f53fc7f4cb37c6ae38f2857488055e781e5adba9"
   integrity sha512-rYBlvIPMNUd6sAaduOaiIwI4vfTAjHDRonko2qJn2RP1O//TQ7rcFIPYVYePJZ4OtOpwHiHAvAIh79McphZotQ==
 
-"@formio/vm@^0.0.7-rc.18":
-  version "0.0.7-rc.25"
-  resolved "https://registry.npmjs.org/@formio/vm/-/vm-0.0.7-rc.25.tgz#1706020766f958061f42a8183d39ffe3940585a9"
-  integrity sha512-tJ+ahDAxEC5xuVMPatPJJjS5zIiOhvSDUz8X4itVvs3YNn7lQmr1agXxHfysqWBUWy3KKSSUfbnULu+aVDmSbg==
+"@formio/vm@0.0.7":
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/@formio/vm/-/vm-0.0.7.tgz#5602e260209487ebc781500c48c5ae8fa85e6ba9"
+  integrity sha512-JPkffHEeU0n2tYc6nPGO/RGZsBew/72c9i3NWdbLo889IMpKd41wlJdc6PzFi39zREC5wSJSLXa7BEmr+IO5Ew==
   dependencies:
-    "@formio/core" "2.0.0-rc.30"
+    "@formio/core" "2.0.0"
     debug "^4.3.4"
     dotenv "^16.3.1"
     express "^4.18.2"
