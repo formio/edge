@@ -48,16 +48,16 @@
     "@aws-sdk/util-utf8-browser" "^3.0.0"
     tslib "^1.11.1"
 
-"@aws-sdk/client-cognito-identity@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/client-cognito-identity/-/client-cognito-identity-3.554.0.tgz#58622cb55e56bca963c2bf7f081f60a0b3049c54"
-  integrity sha512-/rFufn75nrCj5gTpTLIlDxjGoPeAj+gC3JLVqS2Tlpqx3YhqHiz+jYaHYJbkvrcLMEdDFqaoO3DI7y/GcD59Mg==
+"@aws-sdk/client-cognito-identity@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/client-cognito-identity/-/client-cognito-identity-3.556.0.tgz#c05c6161f01a9b5ab7ec83f1e91cd279268d7906"
+  integrity sha512-HWd7PyXCuY1Z9KBaufbzpIvS2QeUAak5wfYwylW2DrEvt6A4tjWCBSbbSXNoawqCv/HitA39v953N/1PojJVVQ==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/client-sts" "3.554.0"
-    "@aws-sdk/core" "3.554.0"
-    "@aws-sdk/credential-provider-node" "3.554.0"
+    "@aws-sdk/client-sts" "3.556.0"
+    "@aws-sdk/core" "3.556.0"
+    "@aws-sdk/credential-provider-node" "3.556.0"
     "@aws-sdk/middleware-host-header" "3.535.0"
     "@aws-sdk/middleware-logger" "3.535.0"
     "@aws-sdk/middleware-recursion-detection" "3.535.0"
@@ -94,15 +94,15 @@
     "@smithy/util-utf8" "^2.3.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-sso-oidc@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/client-sso-oidc/-/client-sso-oidc-3.554.0.tgz#c4002879c89cf5e4a45f39c63b2963f8fab88385"
-  integrity sha512-M86rkiRqbZBF5VyfTQ/vttry9VSoQkZ1oCqYF+SAGlXmD0Of8587yRSj2M4rYe0Uj7nRQIfSnhDYp1UzsZeRfQ==
+"@aws-sdk/client-sso-oidc@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/client-sso-oidc/-/client-sso-oidc-3.556.0.tgz#4c19fccc35361de046d2cd74a7a685d71aa5dd1e"
+  integrity sha512-AXKd2TB6nNrksu+OfmHl8uI07PdgzOo4o8AxoRO8SHlwoMAGvcT9optDGVSYoVfgOKTymCoE7h8/UoUfPc11wQ==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/client-sts" "3.554.0"
-    "@aws-sdk/core" "3.554.0"
+    "@aws-sdk/client-sts" "3.556.0"
+    "@aws-sdk/core" "3.556.0"
     "@aws-sdk/middleware-host-header" "3.535.0"
     "@aws-sdk/middleware-logger" "3.535.0"
     "@aws-sdk/middleware-recursion-detection" "3.535.0"
@@ -139,14 +139,14 @@
     "@smithy/util-utf8" "^2.3.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-sso@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/client-sso/-/client-sso-3.554.0.tgz#fef7b7ee47cad3987b50e9218ec1d11dcd42e32b"
-  integrity sha512-yj6CgIxCT3UwMumEO481KH4QvwArkAPzD7Xvwe1QKgJATc9bKNEo/FxV8LfnWIJ7nOtMDxbNxYLMXH/Fs1qGaQ==
+"@aws-sdk/client-sso@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/client-sso/-/client-sso-3.556.0.tgz#7beeeebb6a437f09680edefc5c998822292a528a"
+  integrity sha512-unXdWS7uvHqCcOyC1de+Fr8m3F2vMg2m24GPea0bg7rVGTYmiyn9mhUX11VCt+ozydrw+F50FQwL6OqoqPocmw==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/core" "3.554.0"
+    "@aws-sdk/core" "3.556.0"
     "@aws-sdk/middleware-host-header" "3.535.0"
     "@aws-sdk/middleware-logger" "3.535.0"
     "@aws-sdk/middleware-recursion-detection" "3.535.0"
@@ -183,14 +183,14 @@
     "@smithy/util-utf8" "^2.3.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-sts@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/client-sts/-/client-sts-3.554.0.tgz#511f1bafe628613f1824274f9c11a9df31ac0b09"
-  integrity sha512-EhaA6T0M0DNg5M8TCF1a7XJI5D/ZxAF3dgVIchyF98iNzjYgl/7U8K6hJay2A11aFvVu70g46xYMpz3Meky4wQ==
+"@aws-sdk/client-sts@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/client-sts/-/client-sts-3.556.0.tgz#3aa20cca462839f1451f11efada2be119dd36a6b"
+  integrity sha512-TsK3js7Suh9xEmC886aY+bv0KdLLYtzrcmVt6sJ/W6EnDXYQhBuKYFhp03NrN2+vSvMGpqJwR62DyfKe1G0QzQ==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/core" "3.554.0"
+    "@aws-sdk/core" "3.556.0"
     "@aws-sdk/middleware-host-header" "3.535.0"
     "@aws-sdk/middleware-logger" "3.535.0"
     "@aws-sdk/middleware-recursion-detection" "3.535.0"
@@ -227,25 +227,25 @@
     "@smithy/util-utf8" "^2.3.0"
     tslib "^2.6.2"
 
-"@aws-sdk/core@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/core/-/core-3.554.0.tgz#84def70777ace823efb54451da403bfc125a8571"
-  integrity sha512-JrG7ToTLeNf+/S3IiCUPVw9jEDB0DXl5ho8n/HwOa946mv+QyCepCuV2U/8f/1KAX0mD8Ufm/E4/cbCbFHgbSg==
+"@aws-sdk/core@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/core/-/core-3.556.0.tgz#d0f4431a72282b71cfbcaedfb803f7f2807cf60b"
+  integrity sha512-vJaSaHw2kPQlo11j/Rzuz0gk1tEaKdz+2ser0f0qZ5vwFlANjt08m/frU17ctnVKC1s58bxpctO/1P894fHLrA==
   dependencies:
     "@smithy/core" "^1.4.2"
     "@smithy/protocol-http" "^3.3.0"
-    "@smithy/signature-v4" "^2.2.1"
+    "@smithy/signature-v4" "^2.3.0"
     "@smithy/smithy-client" "^2.5.1"
     "@smithy/types" "^2.12.0"
     fast-xml-parser "4.2.5"
     tslib "^2.6.2"
 
-"@aws-sdk/credential-provider-cognito-identity@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-cognito-identity/-/credential-provider-cognito-identity-3.554.0.tgz#b894e66570edc5b0d99984d597e7c4f1664ef989"
-  integrity sha512-soF84soy9rTAfzsH1ODP0AnJt5JlsJI8k1aWtC08/Al0CZjLkxDRHzaB1wxubFyT2Ql6bpxbDfU6KDFXsQIpdA==
+"@aws-sdk/credential-provider-cognito-identity@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-cognito-identity/-/credential-provider-cognito-identity-3.556.0.tgz#65964f6e1a9ea9bac66c68138d35d536075cad94"
+  integrity sha512-PKYBjfpLHJZhrIv0M9eJ47yeDaV8NUMVe4vsiHG5tvlvwWGP84k9GJlr51U/s84OzIyXzVpiqP8PU5yKovUFIg==
   dependencies:
-    "@aws-sdk/client-cognito-identity" "3.554.0"
+    "@aws-sdk/client-cognito-identity" "3.556.0"
     "@aws-sdk/types" "3.535.0"
     "@smithy/property-provider" "^2.2.0"
     "@smithy/types" "^2.12.0"
@@ -276,16 +276,16 @@
     "@smithy/util-stream" "^2.2.0"
     tslib "^2.6.2"
 
-"@aws-sdk/credential-provider-ini@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.554.0.tgz#09c6b8f38cdbca3b27f0d71c53465ca9c3f2a5cf"
-  integrity sha512-BQenhg43S6TMJHxrdjDVdVF+HH5tA1op9ZYLyJrvV5nn7CCO4kyAkkOuSAv1NkL+RZsIkW0/vHTXwQOQw3cUsg==
+"@aws-sdk/credential-provider-ini@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.556.0.tgz#bf780feb92a7920cc525cd7cb7870ea61b84c125"
+  integrity sha512-0Nz4ErOlXhe3muxWYMbPwRMgfKmVbBp36BAE2uv/z5wTbfdBkcgUwaflEvlKCLUTdHzuZsQk+BFS/gVyaUeOuA==
   dependencies:
-    "@aws-sdk/client-sts" "3.554.0"
+    "@aws-sdk/client-sts" "3.556.0"
     "@aws-sdk/credential-provider-env" "3.535.0"
     "@aws-sdk/credential-provider-process" "3.535.0"
-    "@aws-sdk/credential-provider-sso" "3.554.0"
-    "@aws-sdk/credential-provider-web-identity" "3.554.0"
+    "@aws-sdk/credential-provider-sso" "3.556.0"
+    "@aws-sdk/credential-provider-web-identity" "3.556.0"
     "@aws-sdk/types" "3.535.0"
     "@smithy/credential-provider-imds" "^2.3.0"
     "@smithy/property-provider" "^2.2.0"
@@ -293,17 +293,17 @@
     "@smithy/types" "^2.12.0"
     tslib "^2.6.2"
 
-"@aws-sdk/credential-provider-node@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-node/-/credential-provider-node-3.554.0.tgz#74e8ae0b69cfba716e57881ace9d6466deedfb5e"
-  integrity sha512-poX/+2OE3oxqp4f5MiaJh251p8l+bzcFwgcDBwz0e2rcpvMSYl9jw4AvGnCiG2bmf9yhNJdftBiS1A+KjxV0qA==
+"@aws-sdk/credential-provider-node@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-node/-/credential-provider-node-3.556.0.tgz#51f3dc4506053249f8593765d1ab2cef53732fa3"
+  integrity sha512-s1xVtKjyGc60O8qcNIzS1X3H+pWEwEfZ7TgNznVDNyuXvLrlNWiAcigPWGl2aAkc8tGcsSG0Qpyw2KYC939LFg==
   dependencies:
     "@aws-sdk/credential-provider-env" "3.535.0"
     "@aws-sdk/credential-provider-http" "3.552.0"
-    "@aws-sdk/credential-provider-ini" "3.554.0"
+    "@aws-sdk/credential-provider-ini" "3.556.0"
     "@aws-sdk/credential-provider-process" "3.535.0"
-    "@aws-sdk/credential-provider-sso" "3.554.0"
-    "@aws-sdk/credential-provider-web-identity" "3.554.0"
+    "@aws-sdk/credential-provider-sso" "3.556.0"
+    "@aws-sdk/credential-provider-web-identity" "3.556.0"
     "@aws-sdk/types" "3.535.0"
     "@smithy/credential-provider-imds" "^2.3.0"
     "@smithy/property-provider" "^2.2.0"
@@ -322,46 +322,46 @@
     "@smithy/types" "^2.12.0"
     tslib "^2.6.2"
 
-"@aws-sdk/credential-provider-sso@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-sso/-/credential-provider-sso-3.554.0.tgz#83e950685aaadb18d48d51c39f6201d820a5de41"
-  integrity sha512-8QPpwBA31i/fZ7lDZJC4FA9EdxLg5SJ8sPB2qLSjp5UTGTYL2HRl0Eznkb7DXyp/wImsR/HFR1NxuFCCVotLCg==
+"@aws-sdk/credential-provider-sso@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-sso/-/credential-provider-sso-3.556.0.tgz#26dfdd2c6e034f66e82985d65bd6aa3ae09d5e19"
+  integrity sha512-ETuBgcnpfxqadEAqhQFWpKoV1C/NAgvs5CbBc5EJbelJ8f4prTdErIHjrRtVT8c02MXj92QwczsiNYd5IoOqyw==
   dependencies:
-    "@aws-sdk/client-sso" "3.554.0"
-    "@aws-sdk/token-providers" "3.554.0"
+    "@aws-sdk/client-sso" "3.556.0"
+    "@aws-sdk/token-providers" "3.556.0"
     "@aws-sdk/types" "3.535.0"
     "@smithy/property-provider" "^2.2.0"
     "@smithy/shared-ini-file-loader" "^2.4.0"
     "@smithy/types" "^2.12.0"
     tslib "^2.6.2"
 
-"@aws-sdk/credential-provider-web-identity@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-web-identity/-/credential-provider-web-identity-3.554.0.tgz#6076a32066b633a18fc90cae7ed0b874db78a556"
-  integrity sha512-HN54DzLjepw5ZWSF9ycGevhFTyg6pjLuLKy5Y8t/f1jFDComzYdGEDe0cdV9YO653W3+PQwZZGz09YVygGYBLg==
+"@aws-sdk/credential-provider-web-identity@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-web-identity/-/credential-provider-web-identity-3.556.0.tgz#94cd55eaee6ca96354237569102dfaf6774544f4"
+  integrity sha512-R/YAL8Uh8i+dzVjzMnbcWLIGeeRi2mioHVGnVF+minmaIkCiQMZg2HPrdlKm49El+RljT28Nl5YHRuiqzEIwMA==
   dependencies:
-    "@aws-sdk/client-sts" "3.554.0"
+    "@aws-sdk/client-sts" "3.556.0"
     "@aws-sdk/types" "3.535.0"
     "@smithy/property-provider" "^2.2.0"
     "@smithy/types" "^2.12.0"
     tslib "^2.6.2"
 
 "@aws-sdk/credential-providers@^3.186.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-providers/-/credential-providers-3.554.0.tgz#b45cb961c72b8c9468b443b8c5a48144f6df9c79"
-  integrity sha512-UMmJ4M7RknSz1p0981t57QUw6DibPEo/GG8+env6Q8dHrEc3pnRL206f1zxLcqzT5RI50XstH/bDtnyC7uRYiw==
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-providers/-/credential-providers-3.556.0.tgz#56d107b4d0c0210cbf1884c8916d5c3c86560d04"
+  integrity sha512-CnWP/AEF+sPeO8fabrHy4Oeo52xDFuDQMpjKcI7oJzGF6Ne2ZPTq6wTJQPLeXeg4OzLcK0tT3G4z/27MLdsLsw==
   dependencies:
-    "@aws-sdk/client-cognito-identity" "3.554.0"
-    "@aws-sdk/client-sso" "3.554.0"
-    "@aws-sdk/client-sts" "3.554.0"
-    "@aws-sdk/credential-provider-cognito-identity" "3.554.0"
+    "@aws-sdk/client-cognito-identity" "3.556.0"
+    "@aws-sdk/client-sso" "3.556.0"
+    "@aws-sdk/client-sts" "3.556.0"
+    "@aws-sdk/credential-provider-cognito-identity" "3.556.0"
     "@aws-sdk/credential-provider-env" "3.535.0"
     "@aws-sdk/credential-provider-http" "3.552.0"
-    "@aws-sdk/credential-provider-ini" "3.554.0"
-    "@aws-sdk/credential-provider-node" "3.554.0"
+    "@aws-sdk/credential-provider-ini" "3.556.0"
+    "@aws-sdk/credential-provider-node" "3.556.0"
     "@aws-sdk/credential-provider-process" "3.535.0"
-    "@aws-sdk/credential-provider-sso" "3.554.0"
-    "@aws-sdk/credential-provider-web-identity" "3.554.0"
+    "@aws-sdk/credential-provider-sso" "3.556.0"
+    "@aws-sdk/credential-provider-web-identity" "3.556.0"
     "@aws-sdk/types" "3.535.0"
     "@smithy/credential-provider-imds" "^2.3.0"
     "@smithy/property-provider" "^2.2.0"
@@ -420,12 +420,12 @@
     "@smithy/util-middleware" "^2.2.0"
     tslib "^2.6.2"
 
-"@aws-sdk/token-providers@3.554.0":
-  version "3.554.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/token-providers/-/token-providers-3.554.0.tgz#5a20ce273451654a1382f772ef119a9a156f537c"
-  integrity sha512-KMMQ5Cw0FUPL9H8g69Lp08xtzRo7r/MK+lBV6LznWBbCP/NwtZ8awVHaPy2P31z00cWtu9MYkUTviWPqJTaBvg==
+"@aws-sdk/token-providers@3.556.0":
+  version "3.556.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/token-providers/-/token-providers-3.556.0.tgz#96b4dd4fec67ae62f8c98ae8c2f94e4ed050073a"
+  integrity sha512-tvIiugNF0/+2wfuImMrpKjXMx4nCnFWQjQvouObny+wrif/PGqqQYrybwxPJDvzbd965bu1I+QuSv85/ug7xsg==
   dependencies:
-    "@aws-sdk/client-sso-oidc" "3.554.0"
+    "@aws-sdk/client-sso-oidc" "3.556.0"
     "@aws-sdk/types" "3.535.0"
     "@smithy/property-provider" "^2.2.0"
     "@smithy/shared-ini-file-loader" "^2.4.0"
@@ -511,12 +511,12 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@formio/appserver-auth-jwt@^2.0.0-dev.7":
-  version "2.0.0-dev.7"
-  resolved "https://registry.npmjs.org/@formio/appserver-auth-jwt/-/appserver-auth-jwt-2.0.0-dev.7.tgz#661c7c0f5259792cd044a7fdd2e88715c80864b0"
-  integrity sha512-hgP9Btu9ipARgAfZmIgANx93iikU2UBDdnHwp94Bu4/IlzGw+ZBQkDTJDGP4FUFX80UFyHW8ndo3jtF+PV2lbA==
+"@formio/appserver-auth-jwt@^2.0.0-dev.7", "@formio/appserver-auth-jwt@^2.0.0-dev.8":
+  version "2.0.0-dev.8"
+  resolved "https://registry.npmjs.org/@formio/appserver-auth-jwt/-/appserver-auth-jwt-2.0.0-dev.8.tgz#663336eef6528c405556a550cac1eb3147b2aefd"
+  integrity sha512-myRCLrbIauuMkO0uES4JXKuHevc1Xcv/tkvVt/OwiDo9ABd69yj0fj2ExJ+XgsrZT6SJCfx2/emey69vfyEarQ==
   dependencies:
-    "@formio/appserver-types" "^2.0.0-dev.6"
+    "@formio/appserver-types" "^2.0.0-dev.9"
     debug "^4.3.4"
     jsonwebtoken "^9.0.2"
 
@@ -549,23 +549,23 @@
     vm2 "^3.9.17"
     xss "^1.0.15"
 
-"@formio/appserver-db-mongodb@^2.0.0-dev.7":
-  version "2.0.0-dev.7"
-  resolved "https://registry.npmjs.org/@formio/appserver-db-mongodb/-/appserver-db-mongodb-2.0.0-dev.7.tgz#62f0a904523f9576f423ca1880d00072076bb546"
-  integrity sha512-9vWxVEgY+3pjbkOLQ7mHwWf0sautwPL5Zn0pHgdinvRQtTPt7+Zum2sXWUqs77HNMkn9l6rAexEaIjZN7FYhZw==
+"@formio/appserver-db-mongodb@^2.0.0-dev.7", "@formio/appserver-db-mongodb@^2.0.0-dev.8":
+  version "2.0.0-dev.8"
+  resolved "https://registry.npmjs.org/@formio/appserver-db-mongodb/-/appserver-db-mongodb-2.0.0-dev.8.tgz#852f0ae40c49553b006f24d4ce920fd7e6bf57ee"
+  integrity sha512-eZDnW45iaMQcICUksxk8Fgw6nLKjdyXWKQJwGyOHpZxkwwKM0bvBN/4Acb6yq015i9+MB1++lGaUHjmhxnFCmw==
   dependencies:
-    "@formio/appserver-types" "^2.0.0-dev.6"
-    "@formio/core" "^2.0.0-rc.24"
+    "@formio/appserver-types" "^2.0.0-dev.9"
+    "@formio/core" "2.0.0"
     debug "^4.3.4"
     lodash "^4.17.21"
     mongodb "^6.5.0"
 
-"@formio/appserver-types@^2.0.0-dev.6", "@formio/appserver-types@^2.0.0-dev.8":
-  version "2.0.0-dev.8"
-  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-2.0.0-dev.8.tgz#80eb3de3964f9a1222f263292fb96b055bd761e8"
-  integrity sha512-tNiK0hSD2ZNIEXb77gp1L6rXOOVwtq3ZAGctNReQ+XC0HY08qHxVam7m1I5bMsVQqc0EErJPrhtyuY2mkZ6dDQ==
+"@formio/appserver-types@^2.0.0-dev.8", "@formio/appserver-types@^2.0.0-dev.9":
+  version "2.0.0-dev.9"
+  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-2.0.0-dev.9.tgz#ae1a68e6caf3fb2e4c7c48c569073364a85a0cb0"
+  integrity sha512-Ezs1WfbcyQgWkpb8Gt51krJizfvhct9epvxuzn+LelU3HNMLLqnoCOtC9P/+R008DlylUwdmYfej2Isg9ABs6w==
   dependencies:
-    "@formio/core" "^2.0.0-rc.24"
+    "@formio/core" "2.0.0"
 
 "@formio/bootstrap3@2.12.4-rc.1":
   version "2.12.4-rc.1"
@@ -601,32 +601,14 @@
     lodash "^4.17.21"
     moment "^2.29.4"
 
-"@formio/core@^2.0.0-rc.24":
-  version "2.0.0-tt.dev-882e7ea"
-  resolved "https://registry.npmjs.org/@formio/core/-/core-2.0.0-tt.dev-882e7ea.tgz#200d6a377b430a1e4e3b27513f392abd739e3063"
-  integrity sha512-PMYCqbP5dSPvWOBMd3KeLiBaBFyXH1J/+QVLum5CtYbEg1UaAXET9T9lh5H1dHyudh2JbTK1Zx/96MkHhi6/pA==
-  dependencies:
-    "@types/json-logic-js" "^2.0.5"
-    browser-cookies "^1.2.0"
-    core-js "^3.33.2"
-    dayjs "^1.11.10"
-    dompurify "^3.0.6"
-    eventemitter3 "^5.0.0"
-    fast-json-patch "^3.1.1"
-    fetch-ponyfill "^7.1.0"
-    inputmask "^5.0.9-beta.45"
-    json-logic-js "^2.0.2"
-    lodash "^4.17.21"
-    moment "^2.29.4"
-
 "@formio/license@^2.0.0-dev.3":
-  version "2.0.0-dev.3"
-  resolved "https://registry.npmjs.org/@formio/license/-/license-2.0.0-dev.3.tgz#90d153df796938cc19f5aa33a263a1143d74912f"
-  integrity sha512-fsLZYkCPGQRS0ZRuAqNMv1Y6AIFpGq1aOblyOe9Ei3FAVG6vSXkBwGS6Iof5138gCsNzLpqW6r1+IVZytknTIg==
+  version "2.0.0-rc.2"
+  resolved "https://registry.npmjs.org/@formio/license/-/license-2.0.0-rc.2.tgz#70cb5030c41ce7c80cf303b84b42dad60dfc82fe"
+  integrity sha512-zp09WOLbux1hWh2XBpGen60RSUNoVsLYOv790JeYNnoqtW02zUNWWcgwhRb159oZnDzp+gWrsZJWX3w9E8LAeA==
   dependencies:
     debug "^4.3.4"
-    formio "^3.5.1"
-    jose "^5.2.4"
+    formio "^3.0.1"
+    jose "^4.14.4"
     jsonwebtoken "^9.0.0"
     node-cache "^5.1.2"
 
@@ -904,7 +886,7 @@
     "@smithy/types" "^2.12.0"
     tslib "^2.6.2"
 
-"@smithy/signature-v4@^2.2.1":
+"@smithy/signature-v4@^2.3.0":
   version "2.3.0"
   resolved "https://registry.npmjs.org/@smithy/signature-v4/-/signature-v4-2.3.0.tgz#c30dd4028ae50c607db99459981cce8cdab7a3fd"
   integrity sha512-ui/NlpILU+6HAQBfJX8BBsDXuKSNrjTSuOYArRblcrErwKFutjrCNb/OExfVRyj9+26F9J+ZmfWT+fKWuDrH3Q==
@@ -1179,9 +1161,9 @@
     undici-types "~5.26.4"
 
 "@types/qs@*":
-  version "6.9.14"
-  resolved "https://registry.npmjs.org/@types/qs/-/qs-6.9.14.tgz#169e142bfe493895287bee382af6039795e9b75b"
-  integrity sha512-5khscbd3SwWMhFqylJBLQ0zIu7c1K6Vz0uBIt915BI3zV0q1nfjRQD3RqSBcPaO6PHEF4ov/t9y89fSiyThlPA==
+  version "6.9.15"
+  resolved "https://registry.npmjs.org/@types/qs/-/qs-6.9.15.tgz#adde8a060ec9c305a82de1babc1056e73bd64dce"
+  integrity sha512-uXHQKES6DQKKCLh441Xv/dwxOq1TVS3JPUMlEqoEglvlhR6Mxnlew/Xq/LRVHpLyk7iK3zODe1qYHIMltO7XGg==
 
 "@types/range-parser@*":
   version "1.2.7"
@@ -1636,9 +1618,9 @@ cookie@0.6.0:
   integrity sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==
 
 core-js@^3.19.3, core-js@^3.26.1, core-js@^3.33.2:
-  version "3.36.1"
-  resolved "https://registry.npmjs.org/core-js/-/core-js-3.36.1.tgz#c97a7160ebd00b2de19e62f4bbd3406ab720e578"
-  integrity sha512-BTvUrwxVBezj5SZ3f10ImnX2oRByMxql3EimVqMysepbC9EeMUOpLwdy6Eoili2x6E4kf+ZUB5k/+Jv55alPfA==
+  version "3.37.0"
+  resolved "https://registry.npmjs.org/core-js/-/core-js-3.37.0.tgz#d8dde58e91d156b2547c19d8a4efd5c7f6c426bb"
+  integrity sha512-fu5vHevQ8ZG4og+LXug8ulUtVxjOcEYvifJr7L5Bfq9GOztVqsKd9/59hUk2ZSbCrS3BqUr3EpaYGIYzq7g3Ug==
 
 cors@^2.8.5:
   version "2.8.5"
@@ -2089,7 +2071,7 @@ formio-workers@1.21.1:
     nunjucks-date-filter "^0.1.1"
     vm2 "^3.9.5"
 
-formio@^3.5.1:
+formio@^3.0.1:
   version "3.5.1"
   resolved "https://registry.npmjs.org/formio/-/formio-3.5.1.tgz#efb4c2698c4453cda776f25c8ff5d03d44be6b01"
   integrity sha512-SmmtiIGznKrBnMYEDTW6lMfnaxD2rBG/dd5wlTaBb678YvLWfAHkcN/2f7nQyOIv8B6UexZOlRMwhWnJv4JAOg==
@@ -2456,6 +2438,11 @@ isstream@0.1.x:
   version "0.1.2"
   resolved "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha512-Yljz7ffyPbrLpLngrMtZ7NduUgVvi6wG9RJ9IUcyCd59YQ911PBJphODUcbOVbqYfxe1wuYf/LJ8PauMRwsM/g==
+
+jose@^4.14.4:
+  version "4.15.5"
+  resolved "https://registry.npmjs.org/jose/-/jose-4.15.5.tgz#6475d0f467ecd3c630a1b5dadd2735a7288df706"
+  integrity sha512-jc7BFxgKPKi94uOvEmzlSWFFe2+vASyXaKUpdQKatWAESU2MWjDfFf0fdfc83CDKcA5QecabZeNLyfhe3yKNkg==
 
 jose@^5.2.4:
   version "5.2.4"
@@ -2952,9 +2939,9 @@ negotiator@0.6.3:
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
 node-abi@^3.3.0:
-  version "3.57.0"
-  resolved "https://registry.npmjs.org/node-abi/-/node-abi-3.57.0.tgz#d772cb899236c0aa46778d0d25256917cf15eb15"
-  integrity sha512-Dp+A9JWxRaKuHP35H77I4kCKesDy5HUDEmScia2FyncMTOXASMyg251F5PhFoDA5uqBrDDffiLpbqnrZmNXW+g==
+  version "3.58.0"
+  resolved "https://registry.npmjs.org/node-abi/-/node-abi-3.58.0.tgz#3df24fb742e27c3d2a56375ade5dcc68e9aa9710"
+  integrity sha512-pXY1jnGf5T7b8UNzWzIqf0EkX4bx/w8N2AvwlGnk2SYYA/kzDVPaH0Dh0UG4EwxBB5eKOIZKPr8VAHSHL1DPGg==
   dependencies:
     semver "^7.3.5"
 
@@ -3048,10 +3035,10 @@ p-locate@^5.0.0:
   dependencies:
     p-limit "^3.0.2"
 
-parchment@3.0.0-rc.1:
-  version "3.0.0-rc.1"
-  resolved "https://registry.npmjs.org/parchment/-/parchment-3.0.0-rc.1.tgz#7af30c2c146afce257040cae2061c7a73d9b30a8"
-  integrity sha512-UiXun/99vbUgfPgAIuyZzqRN1YARfMz3ktAoTOxDWnrK/OMQlshPh0TKrNhePxxDWCGz/xVsexMtsaEQy+fmXQ==
+parchment@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/parchment/-/parchment-3.0.0.tgz#2e3a4ada454e1206ae76ea7afcb50e9fb517e7d6"
+  integrity sha512-HUrJFQ/StvgmXRcQ1ftY6VEZUq3jA2t9ncFN4F84J/vN0/FPpQF+8FKXb3l6fLces6q0uOHj6NJn+2xvZnxO6A==
 
 parseurl@~1.3.2, parseurl@~1.3.3:
   version "1.3.3"
@@ -3150,13 +3137,13 @@ quill-delta@^5.1.0:
     lodash.isequal "^4.5.0"
 
 quill@^2.0.0-dev.3:
-  version "2.0.0-rc.5"
-  resolved "https://registry.npmjs.org/quill/-/quill-2.0.0-rc.5.tgz#c7112ae4b9b610d11a9c7bab220c88553b2df95d"
-  integrity sha512-3jpk3Jb+TETSZ+3owQqneMDVe30qWmp7vXEVkj9Z5b+qp443HKF/jVu86U+uSW1vB2dphFYgHXhh71c/oq4ohQ==
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/quill/-/quill-2.0.0.tgz#d751aa4b04a842518ec24598820e4c1d00de9ca8"
+  integrity sha512-rVjwXhUD7svWsHPgzaT/O5D1xbZ5xeJjN2SZ/CxAkX1+WLV1VaALkmBt/elV/OCYNr/VapuXPoEZMYU5e72NPw==
   dependencies:
     eventemitter3 "^5.0.1"
     lodash-es "^4.17.21"
-    parchment "3.0.0-rc.1"
+    parchment "^3.0.0"
     quill-delta "^5.1.0"
 
 randombytes@^2.1.0:

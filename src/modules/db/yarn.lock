@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@formio/appserver-types@^2.0.0-dev.6":
-  version "2.0.0-dev.6"
-  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-2.0.0-dev.6.tgz#0f48999d2d965289bd76fa5f2c54877715255e4a"
-  integrity sha512-LuC3LMLU4HI0pYu40xyCAGzRDnAB4yo9cWa+uIN3H8N7NkEqGt3KdjxZh8C2JbWCzJnEXFuMedlZG+Bm15fBUA==
+"@formio/appserver-types@^2.0.0-dev.9":
+  version "2.0.0-dev.9"
+  resolved "https://registry.npmjs.org/@formio/appserver-types/-/appserver-types-2.0.0-dev.9.tgz#ae1a68e6caf3fb2e4c7c48c569073364a85a0cb0"
+  integrity sha512-Ezs1WfbcyQgWkpb8Gt51krJizfvhct9epvxuzn+LelU3HNMLLqnoCOtC9P/+R008DlylUwdmYfej2Isg9ABs6w==
   dependencies:
-    "@formio/core" "^2.0.0-rc.24"
+    "@formio/core" "2.0.0"
 
-"@formio/core@^2.0.0-rc.24":
-  version "2.0.0-rc.24"
-  resolved "https://registry.npmjs.org/@formio/core/-/core-2.0.0-rc.24.tgz#26255a1d96c448f5a0da8eafef7c53ad5b934fcd"
-  integrity sha512-uJMqrZr4K7Yaic7jq7ogfVnkQVBivtqq7pA2aniiVH3yIw9RRUPtpLET74MK/mGNWqk/WGakpBJnFdOWO9LM/w==
+"@formio/core@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@formio/core/-/core-2.0.0.tgz#94035bc3d1507ba1531fff8e37fe40501c90182f"
+  integrity sha512-VZGzW5NJ2nOyJVkMirbXZbf2cS2NbMogGeQZSyEA/CT3KU3W1eT5BdEtBzGen1FvyNqhtRUaowPEEDwgVhj9VA==
   dependencies:
     "@types/json-logic-js" "^2.0.5"
     browser-cookies "^1.2.0"

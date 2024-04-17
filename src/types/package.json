@@ -1,6 +1,6 @@
 {
   "name": "@formio/appserver-types",
-  "version": "2.0.0-dev.8",
+  "version": "2.0.0-dev.9",
   "description": "The types for the appserver.",
   "main": "lib/index.js",
   "files": [
@@ -13,10 +13,10 @@
   "author": "",
   "license": "OSL-3.0",
   "dependencies": {
-    "@formio/core": "^2.0.0-rc.24"
+    "@formio/core": "2.0.0"
   },
   "devDependencies": {
-    "@formio/license": "github:formio/license#v1.4.2",
+    "@formio/license": "^2.0.0-dev.3",
     "express": "^4.19.2",
     "typescript": "^5.4.5"
   }
