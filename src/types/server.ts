@@ -41,6 +41,7 @@ export interface ServerConfig {
     license: string;
     status: any;
     cache: boolean;
+    maxBodySize: string;
 }
 
 export interface DBConfig {

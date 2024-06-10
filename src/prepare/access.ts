@@ -2,7 +2,7 @@ import find from 'lodash/find';
 import uniq from 'lodash/uniq';
 import { PrepScope } from '@formio/appserver-types';
 export default async (scope: PrepScope) => {
-    const { req, component } = scope;
+    const { component, submission } = scope;
     let { value } = scope;
     if (
         !value ||
@@ -37,7 +37,7 @@ export default async (scope: PrepScope) => {
 
     // Iterate through each submissionAccess object and assign the appropriate access roles.
     component.submissionAccess.map((access: any) => {
-        const perm = find(req.body.access, {
+        const perm = find(submission.access, {
             type: access.type,
         });
         if (perm) {
@@ -47,7 +47,7 @@ export default async (scope: PrepScope) => {
             perm.resources = uniq(perm.resources.concat(value));
         }
         else {
-            req.body.access.push({
+            submission.access.push({
                 type: access.type,
                 resources: value,
             });

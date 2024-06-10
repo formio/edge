@@ -1,6 +1,6 @@
 {
   "name": "@formio/appserver",
-  "version": "2.0.0-dev.16",
+  "version": "2.0.0-dev.41",
   "description": "A highly performant and extensible Application Server for Form.io Multi-Tenant Deployments.",
   "main": "server.js",
   "scripts": {
@@ -29,13 +29,12 @@
   ],
   "homepage": "https://github.com/formio/appserver#readme",
   "dependencies": {
-    "@formio/appserver-auth-jwt": "^2.0.0-dev.8",
-    "@formio/appserver-core": "^2.0.0-dev.16",
-    "@formio/appserver-db-mongodb": "^2.0.0-dev.8",
-    "@formio/appserver-types": "^2.0.0-dev.9",
-    "@formio/core": "2.0.0",
-    "@formio/license": "^2.0.0-dev.3",
-    "@formio/vm": "0.0.7",
+    "@formio/appserver-auth-jwt": "^2.0.0-dev.9",
+    "@formio/appserver-core": "^2.0.0-dev.40",
+    "@formio/appserver-db-mongodb": "^2.0.0-dev.9",
+    "@formio/appserver-types": "^2.0.0-dev.11",
+    "@formio/core": "^2.1.0-dev.tt.13",
+    "@formio/license": "^2.0.0-dev.4",
     "async": "^3.2.5",
     "bcryptjs": "^2.4.3",
     "debug": "^4.3.4",
@@ -45,6 +44,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@formio/js": "^5.0.0-rc.59",
     "@types/async": "^3.2.24",
     "@types/bcryptjs": "^2.4.6",
     "@types/express": "^4.17.21",
