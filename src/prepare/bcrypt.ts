@@ -1,6 +1,6 @@
 import set from 'lodash/set';
 import bcrypt from 'bcryptjs';
-import { PrepScope } from '@formio/appserver-types';
+import { PrepScope } from '@formio/edge-types';
 export default async (scope: PrepScope) => {
     const { component, data, value, path } = scope;
     if (!value) {

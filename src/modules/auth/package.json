@@ -1,7 +1,7 @@
 {
-  "name": "@formio/appserver-auth-jwt",
-  "version": "2.0.0-dev.9",
-  "description": "JWT Authentication for the AppServer",
+  "name": "@formio/edge-auth-jwt",
+  "version": "2.0.0-dev.10",
+  "description": "JWT Authentication for the Edge Server",
   "main": "lib/auth.js",
   "files": [
     "lib"
@@ -13,7 +13,7 @@
   "author": "",
   "license": "OSL-3.0",
   "dependencies": {
-    "@formio/appserver-types": "^2.0.0-dev.10",
+    "@formio/edge-types": "^2.0.0-dev.12",
     "debug": "^4.3.4",
     "jsonwebtoken": "^9.0.2"
   },

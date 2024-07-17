@@ -3,7 +3,7 @@ import set from 'lodash/set';
 import has from 'lodash/has';
 import get from 'lodash/get';
 import async from 'async';
-import { ActionScope, SubmissionRequest, SubmissionResponse } from '@formio/appserver-types';  
+import { ActionScope, SubmissionRequest, SubmissionResponse } from '@formio/edge-types';  
 import { NextFunction } from 'express';
 const debug = require('debug')('formio:actions:save');
 const error = require('debug')('formio:error');

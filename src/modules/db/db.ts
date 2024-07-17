@@ -1,6 +1,6 @@
 import { Collection, Db, FindOptions, MongoClient, ObjectId } from 'mongodb';
 import { pick, omit, reduce, set, get, isString, isPlainObject, isArray, isObject, isNumber } from 'lodash';
-import { DBConfig, ServerDB, FormScope } from '@formio/appserver-types';
+import { DBConfig, ServerDB, FormScope } from '@formio/edge-types';
 import { escapeRegExCharacters } from '@formio/core';
 import { ValidationContext } from '@formio/core/types';
 const debug = require('debug')('formio:db');

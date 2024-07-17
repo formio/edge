@@ -103,7 +103,7 @@ export interface ServerScope {
     licenseKey?: OfflineLicenseStruct;
 }
 
-export interface AppServerScope {
+export interface edgeScope {
     config?: ServerConfig;
     db?: ServerDB;
     auth?: AuthModule;

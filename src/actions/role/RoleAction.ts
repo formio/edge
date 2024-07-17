@@ -1,4 +1,4 @@
-import { SubmissionRequest, SubmissionResponse, ActionScope } from "@formio/appserver-types";
+import { SubmissionRequest, SubmissionResponse, ActionScope } from "@formio/edge-types";
 import { NextFunction } from "express";
 const debug = require('debug')('formio:actions:role');
 const error = require('debug')('formio:error');

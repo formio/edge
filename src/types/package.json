@@ -1,8 +1,9 @@
 {
-  "name": "@formio/appserver-types",
-  "version": "2.0.0-dev.11",
-  "description": "The types for the appserver.",
+  "name": "@formio/edge-types",
+  "version": "2.0.0-dev.12",
+  "description": "The types for the edge.",
   "main": "lib/index.js",
+  "access": "public",
   "files": [
     "lib"
   ],
@@ -13,11 +14,11 @@
   "author": "",
   "license": "OSL-3.0",
   "dependencies": {
-    "@formio/core": "^2.1.0-dev.tt.5"
+    "@formio/core": "^2.2.0-rc.3"
   },
   "devDependencies": {
-    "@formio/license": "^2.0.0-dev.3",
+    "@formio/license": "^2.0.0-rc.2",
     "express": "^4.19.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.3"
   }
 }

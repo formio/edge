@@ -1,5 +1,5 @@
 import { set, get } from 'lodash';
-import { PrepScope } from '@formio/appserver-types';
+import { PrepScope } from '@formio/edge-types';
 import protect from './protect';
 import { Utils } from '@formio/core';
 

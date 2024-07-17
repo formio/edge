@@ -1,4 +1,3 @@
-/// <reference types="express" />
 declare const _default: {
     save: {
         readonly info: {

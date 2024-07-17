@@ -1,7 +1,7 @@
 {
-  "name": "@formio/appserver-db-mongodb",
-  "version": "2.0.0-dev.9",
-  "description": "The MongoDB Database layer for AppServer.",
+  "name": "@formio/edge-db-mongodb",
+  "version": "2.0.0-dev.10",
+  "description": "The MongoDB Database layer for edge.",
   "main": "lib/db.js",
   "files": [
     "lib"
@@ -13,8 +13,8 @@
   "author": "",
   "license": "OSL-3.0",
   "dependencies": {
-    "@formio/appserver-types": "^2.0.0-dev.10",
-    "@formio/core": "^2.1.0-dev.tt.5",
+    "@formio/core": "^2.2.0-rc.3",
+    "@formio/edge-types": "^2.0.0-dev.10",
     "debug": "^4.3.4",
     "lodash": "^4.17.21",
     "mongodb": "^6.5.0"

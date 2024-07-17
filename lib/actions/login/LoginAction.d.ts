@@ -1,5 +1,5 @@
 import { NextFunction } from 'express';
-import { ActionScope, User, SubmissionRequest, SubmissionResponse } from '@formio/appserver-types';
+import { ActionScope, User, SubmissionRequest, SubmissionResponse } from '@formio/edge-types';
 export declare const LoginAction: {
     readonly info: {
         name: string;

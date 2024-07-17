@@ -1,27 +1,27 @@
 // Load the license key.
 import fs from 'fs';
 import get from 'lodash/get';
-let licenseKey = get(process.env, 'APPSERVER_LICENSE', get(process.env, 'LICENSE_KEY', ''));
+let licenseKey = get(process.env, 'edge_LICENSE', get(process.env, 'LICENSE_KEY', ''));
 if (!licenseKey) {
     try {
         licenseKey = fs.readFileSync(path.join(cwd(), 'license.txt'), 'utf8');
     }
     catch (err) {
-        console.log('No license key found. Please set the APPSERVER_LICENSE environment variable or create a license.txt file in the root of the project.');
+        console.log('No license key found. Please set the edge_LICENSE environment variable or create a license.txt file in the root of the project.');
     }
 }
 
-import { Server as CoreServer } from '@formio/appserver-core';
+import { Server as CoreServer } from '@formio/edge-core';
 import { Database, Auth } from "./modules";
 import Actions from "./actions";
 import { Prepper } from './prepare';
-import { AppServerScope } from '@formio/appserver-types';
+import { edgeScope } from '@formio/edge-types';
 import { cwd } from 'process';
 import path from 'path';
 import defaultsDeep from 'lodash/defaultsDeep';
 import { ProcessTargets } from '@formio/core';
 const packageJson = require('../package.json');
-const appCorePackage = require('@formio/appserver-core/package.json');
+const appCorePackage = require('@formio/edge-core/package.json');
 const corePackage = require('@formio/core');
 
 export const Modules = {
@@ -33,7 +33,7 @@ export const Modules = {
 };
 
 export class Server extends CoreServer {
-    constructor(config: AppServerScope = {}) {
+    constructor(config: edgeScope = {}) {
         if (config.processors) {
             Modules.processors = config.processors;
         }
@@ -45,7 +45,7 @@ export class Server extends CoreServer {
         }
         super({
             db: config.db || new Modules.db({
-                url: get(process.env, 'MONGO', "mongodb://localhost:27017/appserver"),
+                url: get(process.env, 'MONGO', "mongodb://localhost:27017/edge"),
                 config: get(process.env, 'MONGO_CONFIG', "{}")
             }),
             processors: Modules.processors,
@@ -57,8 +57,8 @@ export class Server extends CoreServer {
                 cache: (get(process.env, 'PROJECT_CACHE', true)).toString() === 'true',
                 status: {
                     version: '8.0.0',
-                    '@formio/appserver': packageJson.version,
-                    '@formio/appserver-core': appCorePackage.version,
+                    '@formio/edge': packageJson.version,
+                    '@formio/edge-core': appCorePackage.version,
                     '@formio/core': corePackage.version
                 },
                 auth: {

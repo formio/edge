@@ -5,7 +5,7 @@ The Form.io Application Server is a performant run-time application server used 
 To use this library, you must mount it within an Express.js application. As an example, you can create a simple Express.js application with this library by first creating a new [Express.js application](https://expressjs.com/en/starter/installing.html) and then install and use the Server as follows.
 
 ```
-npm install --save @formio/appserver
+npm install --save @formio/edge
 ```
 
 Then within your server.js file, you would add the following.
@@ -13,7 +13,7 @@ Then within your server.js file, you would add the following.
 ```js
 const express = require('express');
 const app = express();
-const { Server } = require('@formio/appserver');
+const { Server } = require('@formio/edge');
 (async function bootup() {
     // Create the server.
     const server = new Server();
@@ -55,37 +55,37 @@ This library uses environment variables to configure the configurations required
 
 | Variable Name         | Required | Description | Example |
 |--------------|-----|-----------|-----|
-| MONGO | yes | Your MongoDB Connection string to use the default DB. | mongodb://localhost:27017/appserver |
+| MONGO | yes | Your MongoDB Connection string to use the default DB. | mongodb://localhost:27017/edge |
 | PROJECT_ENDPOINT | yes | The endpoint for your deployed Form.io Enterprise project. | https://mydeployment.com/myproject |
 | PROJECT_KEY | yes | The API Key for your deployed Form.io Enterprise Project. | abc123 |
-| LICENSE_KEY | yes | Your License Key for this AppServer deployment. | <LONG LICENSE KEY> |
+| LICENSE_KEY | yes | Your License Key for this edge deployment. | <LONG LICENSE KEY> |
 | PORT | no | The port that your server will run on. Default 3005 | 3005 |
 | JWT_SECRET | yes | The key used to protect your JWT authentication tokens. | YOUR_SECRET_KEY |
 | JWT_EXPIRE_TIME | no | The number of minutes to expire your JWT token. | 240 |
-| PORTAL_SECRET | no | Provides the ability to connect to the AppServer via the Remote Environment Connection within your Developer Portal. | YOUR_SECRET_KEY |
+| PORTAL_SECRET | no | Provides the ability to connect to the edge via the Remote Environment Connection within your Developer Portal. | YOUR_SECRET_KEY |
 | PROJECT_CACHE | no | Disables the cache for project resources (such as Project template, Project Settings, and Access Settings). Default "true" | true |
 | MONGO_CONFIG | no | Additional configurations to add to the DB connection string | {} |
 
 ### Developer Portal Connection
-Once you have the AppServer running within your own environment, and connected to your own database, you can now deploy your new changes to your forms, resources, project settings, etc. To accomplish this, you must first run the AppServer using the ```PORTAL_SECRET``` described above.
+Once you have the edge running within your own environment, and connected to your own database, you can now deploy your new changes to your forms, resources, project settings, etc. To accomplish this, you must first run the edge using the ```PORTAL_SECRET``` described above.
 
 Once you have this set, you can then log into your Developer Portal, and then navigate to your Project.
 
-Once there, you will then go to your **Staging | Connect Environment**.  Here you will put your AppServer endpoint and the PORTAL_SECRET value. You will then want to set the **Project Path Type** to use **Subdirectory**. Then click **Continue**. 
+Once there, you will then go to your **Staging | Connect Environment**.  Here you will put your edge endpoint and the PORTAL_SECRET value. You will then want to set the **Project Path Type** to use **Subdirectory**. Then click **Continue**. 
 
-You will then see the next page, where you will select your Stage in the dropdown. You should see it since the AppServer connects to the project on bootup.
+You will then see the next page, where you will select your Stage in the dropdown. You should see it since the edge connects to the project on bootup.
 
-Once you are connected, any changes you make within the Developer portal will now be directly reflected within your AppServer deployment.
+Once you are connected, any changes you make within the Developer portal will now be directly reflected within your edge deployment.
 
 ### Custom Configuration
-The AppServer is very extensible, and many things can be altered and modified as well as custom implementations of different components are possible using configurations.
+The edge is very extensible, and many things can be altered and modified as well as custom implementations of different components are possible using configurations.
 
 The following configurations can be provided to the Server instance. Here are some configurations that are supported.
 
 ```js
 const express = require('express');
 const app = express();
-const { Server, Prepper } = require('@formio/appserver');
+const { Server, Prepper } = require('@formio/edge');
 const { CustomDB } = require('./customDb');
 const { CustomAuth } = require('./customAuth');
 const { CustomAction } = require('./actions/custom');
@@ -95,7 +95,7 @@ const { CustomAction } = require('./actions/custom');
         /**
          * The "db" configuration provides a way to use a Custom database implementation.
          * 
-         * See https://github.com/formio/appserver/blob/main/src/db.ts for an example on 
+         * See https://github.com/formio/edge/blob/main/src/db.ts for an example on 
          * how to implement your own custom db.
          */
         db: CustomDB,
@@ -104,7 +104,7 @@ const { CustomAction } = require('./actions/custom');
          * The "auth" configuration provides a way to implement your own custom Authentication
          * system. 
          * 
-         * See https://github.com/formio/appserver/blob/main/src/auth.ts for an example on 
+         * See https://github.com/formio/edge/blob/main/src/auth.ts for an example on 
          * how to implement one.
          */
         auth: CustomAuth,
@@ -126,7 +126,7 @@ const { CustomAction } = require('./actions/custom');
          * the data before it is transfered. A good example of a prepper is to remove any 
          * "protected" fields so they are not sent up to the client application. 
          * 
-         * See https://github.com/formio/appserver/tree/main/src/prepare for examples.
+         * See https://github.com/formio/edge/tree/main/src/prepare for examples.
          * 
          * There are two types of preppers... those called on "save" and those called on "read".
          * 
@@ -134,7 +134,7 @@ const { CustomAction } = require('./actions/custom');
          *  - read: Called when the submission is being read from the database and sent to the
          *          client application.
          * 
-         * The "scope" argument is a PrepScope type. See https://github.com/formio/appserver/blob/main/src/types/submission.ts
+         * The "scope" argument is a PrepScope type. See https://github.com/formio/edge/blob/main/src/types/submission.ts
          */
         preppers: {
             save: Prepper.preppers.save.concat([
@@ -157,9 +157,9 @@ const { CustomAction } = require('./actions/custom');
          * submissions. They should return an "errors" array if there are any errors during the
          * processing phase. A good example of a processor is submission validation.
          * 
-         * See https://github.com/formio/appserver/tree/main/src/process for other examples.
+         * See https://github.com/formio/edge/tree/main/src/process for other examples.
          * 
-         * The "scope" argument is a ProcessScope type. See https://github.com/formio/appserver/blob/main/src/types/submission.ts
+         * The "scope" argument is a ProcessScope type. See https://github.com/formio/edge/blob/main/src/types/submission.ts
          */
         processors: Processor.processors.concat([
             async (scope) => {

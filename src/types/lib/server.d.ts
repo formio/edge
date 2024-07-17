@@ -91,7 +91,7 @@ export interface ServerScope {
     hook?: (name: string, ...args: any[]) => void;
     licenseKey?: OfflineLicenseStruct;
 }
-export interface AppServerScope {
+export interface edgeScope {
     config?: ServerConfig;
     db?: ServerDB;
     auth?: AuthModule;

@@ -1,6 +1,6 @@
 import find from 'lodash/find';
 import uniq from 'lodash/uniq';
-import { PrepScope } from '@formio/appserver-types';
+import { PrepScope } from '@formio/edge-types';
 export default async (scope: PrepScope) => {
     const { component, submission } = scope;
     let { value } = scope;

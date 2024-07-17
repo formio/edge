@@ -4,7 +4,7 @@ import set from 'lodash/set';
 import get from 'lodash/get';
 import unset from 'lodash/unset';
 import { NextFunction } from 'express';
-import { ActionScope, User, SubmissionRequest, SubmissionResponse } from '@formio/appserver-types';
+import { ActionScope, User, SubmissionRequest, SubmissionResponse } from '@formio/edge-types';
 const debug = require('debug')('formio:action:login');
 const error = require('debug')('formio:error');
 export const LoginAction = {

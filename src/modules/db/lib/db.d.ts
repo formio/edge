@@ -1,5 +1,5 @@
 import { Collection, Db, FindOptions } from 'mongodb';
-import { DBConfig, ServerDB, FormScope } from '@formio/appserver-types';
+import { DBConfig, ServerDB, FormScope } from '@formio/edge-types';
 import { ValidationContext } from '@formio/core/types';
 export declare class Database implements ServerDB {
     config: DBConfig;

@@ -5,7 +5,7 @@ import persist from './persist';
 import protect from './protect';
 import password from './password';
 import { referenceLoad, referenceSave } from './reference';
-import { PrepScope, Prepper as PrepperType } from '@formio/appserver-types';
+import { PrepScope, Prepper as PrepperType } from '@formio/edge-types';
 import { Utils } from '@formio/core';
 export const Preppers = {
     bcrypt,

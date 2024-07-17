@@ -1,3 +1,3 @@
-import { Database } from '@formio/appserver-db-mongodb';
-import { Auth } from '@formio/appserver-auth-jwt';
+import { Database } from '@formio/edge-db-mongodb';
+import { Auth } from '@formio/edge-auth-jwt';
 export { Database, Auth };

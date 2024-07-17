@@ -66,10 +66,10 @@
       "skipLibCheck": true,                     /* Skip type checking of declaration files. */
       "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
       "paths": {
-        "@formio/appserver-types": ["src/types"],
-        "@formio/appserver-db-mongodb": ["src/modules/db"],
-        "@formio/appserver-auth-jwt": ["src/modules/auth"],
-        "@formio/appserver": ["src"]
+        "@formio/edge-types": ["src/types"],
+        "@formio/edge-db-mongodb": ["src/modules/db"],
+        "@formio/edge-auth-jwt": ["src/modules/auth"],
+        "@formio/edge": ["src"]
       }
     },
     "include": [

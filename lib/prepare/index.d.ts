@@ -1,4 +1,4 @@
-import { PrepScope, Prepper as PrepperType } from '@formio/appserver-types';
+import { PrepScope, Prepper as PrepperType } from '@formio/edge-types';
 export declare const Preppers: {
     bcrypt: (scope: PrepScope) => Promise<void>;
     access: (scope: PrepScope) => Promise<void>;

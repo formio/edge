@@ -1,14 +1,13 @@
-/// <reference types="express" />
-import { Server as CoreServer } from '@formio/appserver-core';
+import { Server as CoreServer } from '@formio/edge-core';
 import { Database, Auth } from "./modules";
 import Actions from "./actions";
 import { Prepper } from './prepare';
-import { AppServerScope } from '@formio/appserver-types';
+import { edgeScope } from '@formio/edge-types';
 export declare const Modules: {
     db: typeof Database;
     auth: typeof Auth;
     processors: ProcessTarget;
-    prepper: import("@formio/appserver-types").Prepper;
+    prepper: import("@formio/edge-types").Prepper;
     actions: {
         save: {
             readonly info: {
@@ -25,12 +24,12 @@ export declare const Modules: {
                     method: boolean;
                 };
             };
-            mappingComponents(scope: import("@formio/appserver-types").ActionScope): Promise<any>;
-            settingsForm(scope: import("@formio/appserver-types").ActionScope): Promise<any>;
-            saveToForm(scope: import("@formio/appserver-types").ActionScope, resource: string): undefined;
-            childSubmission(scope: import("@formio/appserver-types").ActionScope, req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse, submission: any): any;
-            childResponse(scope: import("@formio/appserver-types").ActionScope, req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse): void;
-            executor(scope: import("@formio/appserver-types").ActionScope): Promise<(req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
+            mappingComponents(scope: import("@formio/edge-types").ActionScope): Promise<any>;
+            settingsForm(scope: import("@formio/edge-types").ActionScope): Promise<any>;
+            saveToForm(scope: import("@formio/edge-types").ActionScope, resource: string): undefined;
+            childSubmission(scope: import("@formio/edge-types").ActionScope, req: import("@formio/edge-types").SubmissionRequest, res: import("@formio/edge-types").SubmissionResponse, submission: any): any;
+            childResponse(scope: import("@formio/edge-types").ActionScope, req: import("@formio/edge-types").SubmissionRequest, res: import("@formio/edge-types").SubmissionResponse): void;
+            executor(scope: import("@formio/edge-types").ActionScope): Promise<(req: import("@formio/edge-types").SubmissionRequest, res: import("@formio/edge-types").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
         };
         login: {
             readonly info: {
@@ -47,7 +46,7 @@ export declare const Modules: {
                     method: boolean;
                 };
             };
-            settingsForm(scope: import("@formio/appserver-types").ActionScope): Promise<({
+            settingsForm(scope: import("@formio/edge-types").ActionScope): Promise<({
                 type: string;
                 label: string;
                 key: string;
@@ -113,8 +112,8 @@ export declare const Modules: {
                 validate?: undefined;
             })[]>;
             waitText(time: number): string;
-            checkAttempts(scope: import("@formio/appserver-types").ActionScope, error: any, user: import("@formio/appserver-types").User): Promise<any>;
-            executor(scope: import("@formio/appserver-types").ActionScope): Promise<(req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
+            checkAttempts(scope: import("@formio/edge-types").ActionScope, error: any, user: import("@formio/edge-types").User): Promise<any>;
+            executor(scope: import("@formio/edge-types").ActionScope): Promise<(req: import("@formio/edge-types").SubmissionRequest, res: import("@formio/edge-types").SubmissionResponse, next: import("express").NextFunction) => Promise<void>>;
         };
         role: {
             readonly info: {
@@ -131,7 +130,7 @@ export declare const Modules: {
                     method: boolean;
                 };
             };
-            settingsForm(scope: import("@formio/appserver-types").ActionScope): Promise<({
+            settingsForm(scope: import("@formio/edge-types").ActionScope): Promise<({
                 type: string;
                 input: boolean;
                 label: string;
@@ -164,12 +163,12 @@ export declare const Modules: {
                     required: boolean;
                 };
             })[]>;
-            executor(scope: import("@formio/appserver-types").ActionScope): Promise<(req: import("@formio/appserver-types").SubmissionRequest, res: import("@formio/appserver-types").SubmissionResponse, next: import("express").NextFunction) => Promise<void | import("@formio/appserver-types").SubmissionResponse>>;
+            executor(scope: import("@formio/edge-types").ActionScope): Promise<(req: import("@formio/edge-types").SubmissionRequest, res: import("@formio/edge-types").SubmissionResponse, next: import("express").NextFunction) => Promise<void | import("@formio/edge-types").SubmissionResponse>>;
         };
     };
 };
 export declare class Server extends CoreServer {
-    constructor(config?: AppServerScope);
+    constructor(config?: edgeScope);
 }
 export { Prepper };
 export { Database };
