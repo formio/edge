@@ -12,6 +12,7 @@ export interface SubmissionScope extends FormScope {
 export interface SubmissionRequest extends Request {
     user: any;
     token: any;
+    decoded: any;
     scope: any;
     admin: any;
     headers: any;
