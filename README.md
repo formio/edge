@@ -1,11 +1,17 @@
-## Form.io Application Server
-The Form.io Application Server is a performant run-time application server used to serve single project templates (including forms, resources, roles, etc) at a single deployed endpoint. It's goal is to enable rapid single tenant deployments where you wish to manage all Forms and Resources within a single location, but store the tenant data within their own database.
+## Form.io Edge Server
+The Form.io Edge Server is a performant run-time application server used to serve single project templates (including forms, resources, roles, etc) at a single deployed endpoint. 
+
+It's goals are as follows:
+ - Provide a single project runtime server where non-submission resources are cached in memory.
+ - Enable multi-tenant / multi-database deployments.
+ - Provide extensible server-side functionality
+ - Support other databases besides MongoDB compliant databases for submission data.
 
 ### Installation
 To use this library, you must mount it within an Express.js application. As an example, you can create a simple Express.js application with this library by first creating a new [Express.js application](https://expressjs.com/en/starter/installing.html) and then install and use the Server as follows.
 
 ```
-npm install --save @formio/edge
+npm install --save @formio/edge@rc
 ```
 
 Then within your server.js file, you would add the following.
@@ -30,6 +36,9 @@ const { Server } = require('@formio/edge');
     });
 })();
 ```
+
+### License
+The Form.io Edge Server does require a license to run. If you are interested in trying out this technology, please contact us @ https://form.io/contact-us 
 
 ### Running Locally
 To run this library locally, you can clone the repository, and then npm install.
@@ -58,27 +67,27 @@ This library uses environment variables to configure the configurations required
 | MONGO | yes | Your MongoDB Connection string to use the default DB. | mongodb://localhost:27017/edge |
 | PROJECT_ENDPOINT | yes | The endpoint for your deployed Form.io Enterprise project. | https://mydeployment.com/myproject |
 | PROJECT_KEY | yes | The API Key for your deployed Form.io Enterprise Project. | abc123 |
-| LICENSE_KEY | yes | Your License Key for this edge deployment. | <LONG LICENSE KEY> |
+| LICENSE_KEY | yes | Your License Key for this Edge Server deployment. | <LONG LICENSE KEY> |
 | PORT | no | The port that your server will run on. Default 3005 | 3005 |
 | JWT_SECRET | yes | The key used to protect your JWT authentication tokens. | YOUR_SECRET_KEY |
 | JWT_EXPIRE_TIME | no | The number of minutes to expire your JWT token. | 240 |
-| PORTAL_SECRET | no | Provides the ability to connect to the edge via the Remote Environment Connection within your Developer Portal. | YOUR_SECRET_KEY |
+| PORTAL_SECRET | no | Provides the ability to connect to the Edge Server via the Remote Environment Connection within your Developer Portal. | YOUR_SECRET_KEY |
 | PROJECT_CACHE | no | Disables the cache for project resources (such as Project template, Project Settings, and Access Settings). Default "true" | true |
 | MONGO_CONFIG | no | Additional configurations to add to the DB connection string | {} |
 
 ### Developer Portal Connection
-Once you have the edge running within your own environment, and connected to your own database, you can now deploy your new changes to your forms, resources, project settings, etc. To accomplish this, you must first run the edge using the ```PORTAL_SECRET``` described above.
+Once you have the Edge Server running within your own environment, and connected to your own database, you can now deploy your new changes to your forms, resources, project settings, etc. To accomplish this, you must first run the Edge Server using the ```PORTAL_SECRET``` described above.
 
 Once you have this set, you can then log into your Developer Portal, and then navigate to your Project.
 
-Once there, you will then go to your **Staging | Connect Environment**.  Here you will put your edge endpoint and the PORTAL_SECRET value. You will then want to set the **Project Path Type** to use **Subdirectory**. Then click **Continue**. 
+Once there, you will then go to your **Staging | Connect Environment**.  Here you will put your Edge Server endpoint and the PORTAL_SECRET value. You will then want to set the **Project Path Type** to use **Subdirectory**. Then click **Continue**. 
 
-You will then see the next page, where you will select your Stage in the dropdown. You should see it since the edge connects to the project on bootup.
+You will then see the next page, where you will select your Stage in the dropdown. You should see it since the Edge Server connects to the project on bootup.
 
-Once you are connected, any changes you make within the Developer portal will now be directly reflected within your edge deployment.
+Once you are connected, any changes you make within the Developer portal will now be directly reflected within your Edge Server deployment.
 
 ### Custom Configuration
-The edge is very extensible, and many things can be altered and modified as well as custom implementations of different components are possible using configurations.
+The Edge Server is very extensible, and many things can be altered and modified as well as custom implementations of different components are possible using configurations.
 
 The following configurations can be provided to the Server instance. Here are some configurations that are supported.
 
